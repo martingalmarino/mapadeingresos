@@ -10,7 +10,12 @@ const { placeholder = 'Buscá una plataforma o un modelo…', id = 'busqueda' } 
 <form class="search-shell" action="/oportunidades/" method="get" data-enhanced-search>
   <label class="visually-hidden" for={id}>Buscar oportunidades</label>
   <input id={id} type="search" placeholder={placeholder} autocomplete="off" />
-  <button type="submit" aria-label="Ir al directorio">Buscar</button>
+  <button type="submit" aria-label="Ir al directorio">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+      <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"></circle>
+      <path d="M20 20 L16.2 16.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </svg>
+  </button>
 </form>
 <noscript>
   <p class="fact-line"><a href="/oportunidades/">Ver el directorio completo</a> — la búsqueda con texto necesita JavaScript.</p>

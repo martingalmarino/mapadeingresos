@@ -1,11 +1,15 @@
 ---
 import { footerGroups, site } from '../data/site';
+import BrandMark from './BrandMark.astro';
 ---
 
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a class="wordmark" href="/" style="color:#fff">{site.name.replace('.ar', '')}<span>.ar</span></a>
+      <a class="wordmark" href="/">
+        <BrandMark size={32} />
+        <span class="wordmark-text">{site.name.replace('.ar', '')}<span>.ar</span></span>
+      </a>
       <p>Directorio editorial de oportunidades de monetización digital. No prometemos ingresos ni ranking de popularidad.</p>
     </div>
     {

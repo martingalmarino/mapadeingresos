@@ -5,47 +5,65 @@ const typeOptions = Object.entries(platformTypes).map(([id, value]) => ({ id, la
 ---
 
 <form class="filters" data-directory-filters>
-  <div class="toolbar">
-    <div style="flex:1;min-width:min(100%,280px)">
-      <label class="visually-hidden" for="directorio-q">Filtrar por texto</label>
-      <input class="filter-search" id="directorio-q" type="search" name="q" placeholder="Buscá por nombre, resumen, categoría o nicho" autocomplete="off" />
-    </div>
-    <div>
-      <label for="orden">Orden</label>
-      <select id="orden" name="sort" style="min-height:44px;margin-left:0.4rem;font:inherit">
+  <div class="filter-bar">
+    <label class="visually-hidden" for="directorio-q">Filtrar por texto</label>
+    <input class="filter-search" id="directorio-q" type="search" name="q" placeholder="Buscá por nombre, resumen, categoría o nicho" autocomplete="off" />
+    <label class="sort-field">
+      <span class="visually-hidden">Orden</span>
+      <select id="orden" name="sort">
         <option value="az">A-Z</option>
         <option value="editorial">Selección editorial</option>
       </select>
-    </div>
+    </label>
   </div>
   <div class="filters-groups">
     <fieldset>
       <legend>Modelo</legend>
-      {Object.entries(models).map(([id, value]) => (
-        <label><input type="checkbox" name="model" value={id} /> {value.label}</label>
-      ))}
+      <div class="chip-row start">
+        {Object.entries(models).map(([id, value]) => (
+          <label class="chip-check">
+            <input type="checkbox" name="model" value={id} />
+            <span data-tone={id}>{value.shortLabel}</span>
+          </label>
+        ))}
+      </div>
     </fieldset>
     <fieldset>
       <legend>Canal</legend>
-      {Object.entries(channels).map(([id, value]) => (
-        <label><input type="checkbox" name="channel" value={id} /> {value.label}</label>
-      ))}
+      <div class="chip-row start">
+        {Object.entries(channels).map(([id, value]) => (
+          <label class="chip-check">
+            <input type="checkbox" name="channel" value={id} />
+            <span>{value.label}</span>
+          </label>
+        ))}
+      </div>
     </fieldset>
     <fieldset>
       <legend>Alta en Argentina</legend>
-      {Object.entries(eligibilityLabels).map(([id, value]) => (
-        <label><input type="checkbox" name="eligibility" value={id} /> {value.shortLabel}</label>
-      ))}
+      <div class="chip-row start">
+        {Object.entries(eligibilityLabels).map(([id, value]) => (
+          <label class="chip-check">
+            <input type="checkbox" name="eligibility" value={id} />
+            <span data-status={id}>{value.shortLabel}</span>
+          </label>
+        ))}
+      </div>
     </fieldset>
     <fieldset class="wide">
       <legend>Tipo de plataforma</legend>
-      {typeOptions.map((option) => (
-        <label><input type="checkbox" name="type" value={option.id} /> {option.label}</label>
-      ))}
+      <div class="chip-row start">
+        {typeOptions.map((option) => (
+          <label class="chip-check">
+            <input type="checkbox" name="type" value={option.id} />
+            <span>{option.label}</span>
+          </label>
+        ))}
+      </div>
     </fieldset>
   </div>
   <div class="toolbar">
-    <p aria-live="polite" data-result-count></p>
+    <p class="fact-line" aria-live="polite" data-result-count></p>
     <button class="button-ghost" type="reset">Limpiar filtros</button>
   </div>
   <div class="active-chips" data-active-chips></div>

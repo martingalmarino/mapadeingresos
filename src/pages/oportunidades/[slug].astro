@@ -54,15 +54,17 @@ const officialLabel = data.affiliateUrl ? 'Ir al enlace de afiliado' : 'Ir al si
 >
   <div class="detail-layout">
     <article>
-      <div class="card-top" style="margin-bottom:1rem">
+      <div class="detail-hero">
         <div class="mark" style={`background:${markColor(slug)}`} aria-hidden="true">{initials(data.name)}</div>
-        <VerificationBadge status={data.argentinaEligibility} />
+        <div>
+          <p class="fact-line">{platformTypes[data.platformType].label} · Actualizado el {formatDisplayDate(data.contentUpdatedAt)}</p>
+          <h1>{data.name}</h1>
+          <VerificationBadge status={data.argentinaEligibility} />
+        </div>
       </div>
-      <p class="fact-line">{platformTypes[data.platformType].label} · Actualizado el {formatDisplayDate(data.contentUpdatedAt)}</p>
-      <h1>{data.name}</h1>
       <p class="lede">{data.summary}</p>
-      <div class="badge-row" style="margin:1rem 0">
-        {data.models.map((model) => <a class="badge" href={models[model].href}>{models[model].label}</a>)}
+      <div class="badge-row" style="margin:1rem 0 1.4rem">
+        {data.models.map((model) => <a class="badge" data-tone={model} href={models[model].href}>{models[model].label}</a>)}
         {data.channels.map((channel) => <a class="chip" href={channels[channel].href}>{channels[channel].label}</a>)}
       </div>
       <div class="article-body">

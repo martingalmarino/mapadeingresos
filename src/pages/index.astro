@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BrandMark from '../components/BrandMark.astro';
 import SearchForm from '../components/SearchForm.astro';
 import OpportunityCard from '../components/OpportunityCard.astro';
 import Graphic from '../components/Graphic.astro';
+import { site } from '../data/site';
 import { models } from '../data/taxonomies';
 import { curatedLists, featuredSlugs, profileTiles } from '../data/homepage';
 import { getPublishedGuides, getPublishedOpportunities, slugOf, toCardData } from '../lib/catalog';
@@ -43,14 +45,27 @@ const jsonLd = [
 >
   <section class="hero">
     <div class="container">
+      <p class="hero-brand">
+        <BrandMark size={42} />
+        <span>{site.name.replace('.ar', '')}<span>.ar</span></span>
+      </p>
+      <div class="hero-brand-line" aria-hidden="true"></div>
       <h1>Encontrá oportunidades para monetizar desde Argentina</h1>
       <p class="lede">Explorá programas de afiliados, publicidad, membresías y plataformas para vender contenido. Compará requisitos y conocé qué falta verificar antes de empezar.</p>
-      <SearchForm />
-      <div class="chip-row">
-        {Object.values(models).map((model) => <a class="chip" href={model.href}>{model.label}</a>)}
-        <a class="chip" href="/redes-de-afiliacion/">Redes de afiliación</a>
+      <div class="hero-controls">
+        <SearchForm />
+        <div class="chip-row">
+          {Object.entries(models).map(([id, model]) => (
+            <a class="chip" data-tone={id} href={model.href}>{model.shortLabel}</a>
+          ))}
+          <a class="chip" data-tone="redes" href="/redes-de-afiliacion/">Redes</a>
+        </div>
       </div>
-      <p class="fact-line">{opportunities.length} oportunidades para explorar</p>
+      <p class="fact-line">
+        <span>{opportunities.length} fichas</span>
+        <span>Revisión editorial</span>
+        <span>Sin promesas de ingresos</span>
+      </p>
     </div>
   </section>
 
@@ -88,8 +103,8 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section pastel pastel-blue diagonal">
-    <div class="container">
+  <section class="section">
+    <div class="container panel panel-blue">
       <h2>¿Qué querés monetizar?</h2>
       <p class="section-intro">Elegí un perfil según el canal que ya tenés. Cada página explica encaje, límites y fichas relacionadas.</p>
       <div class="profile-grid">
@@ -123,8 +138,8 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section pastel pastel-blue diagonal">
-    <div class="container explain-grid">
+  <section class="section">
+    <div class="container panel panel-blue explain-grid">
       <Graphic name="choose" />
       <div>
         <h2>Cómo elegir una oportunidad</h2>
@@ -134,8 +149,8 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section pastel pastel-lavender diagonal">
-    <div class="container explain-grid">
+  <section class="section">
+    <div class="container panel panel-lavender explain-grid">
       <Graphic name="argentina" />
       <div>
         <h2>Qué cambia cuando estás en Argentina</h2>
@@ -145,8 +160,8 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section pastel pastel-pink diagonal">
-    <div class="container explain-grid">
+  <section class="section">
+    <div class="container panel panel-pink explain-grid">
       <Graphic name="evidence" />
       <div>
         <h2>Cómo revisamos la evidencia</h2>

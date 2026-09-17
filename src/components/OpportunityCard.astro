@@ -9,10 +9,12 @@ interface Props {
 }
 
 const { item } = Astro.props;
+const mark = markColor(item.slug);
 ---
 
 <article
-  class="opportunity-card"
+  class:list={['opportunity-card', { 'is-featured': item.featured }]}
+  style={`--mark:${mark}`}
   data-opportunity-card
   data-slug={item.slug}
   data-name={item.name}
@@ -24,20 +26,55 @@ const { item } = Astro.props;
   data-eligibility={item.argentinaEligibility}
   data-featured={String(item.featured)}
 >
-  <div class="card-top">
-    <div class="mark" style={`background:${markColor(item.slug)}`} aria-hidden="true">{initials(item.name)}</div>
+    <div class="card-meta">
+    {
+      item.featured ? (
+        <span class="featured-flag">
+          <svg viewBox="0 0 20 20" width="12" height="12" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M10 1.8 12.4 7l5.6.5-4.3 3.7 1.3 5.5L10 13.8 4.9 16.7l1.3-5.5L1.9 7.5 7.6 7 10 1.8Z"
+            ></path>
+          </svg>
+          Destacada
+        </span>
+      ) : (
+        <span class="card-type">{item.platformTypeLabel}</span>
+      )
+    }
     <VerificationBadge status={item.argentinaEligibility} compact />
   </div>
-  <h3>{item.name}</h3>
-  <p>{item.summary}</p>
+  <div class="card-identity">
+    <div class="mark" aria-hidden="true">{initials(item.name)}</div>
+    <h3>
+      <a href={item.href}>{item.name}</a>
+    </h3>
+  </div>
+  <p class="card-summary">« {item.summary} »</p>
   <div class="badge-row">
-    {item.models.map((model) => <span class="badge">{models[model].label}</span>)}
-    {item.isNetwork && <span class="badge">Red</span>}
+    {item.models.map((model) => (
+      <span class="badge" data-tone={model}>{models[model].shortLabel}</span>
+    ))}
+    {item.isNetwork && <span class="badge" data-tone="redes">Red</span>}
   </div>
   <div class="card-actions">
-    <a class="button-primary" href={item.href}>Ver ficha</a>
-    <button class="compare-toggle" type="button" data-compare-toggle={item.slug} aria-pressed="false">
-      Comparar
+    <a class="button-primary" href={item.href}>
+      <span>Ver ficha</span>
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+        <path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+    <button
+      class="compare-toggle"
+      type="button"
+      data-compare-toggle={item.slug}
+      aria-pressed="false"
+      aria-label={`Comparar ${item.name}`}
+      title="Agregar a la comparación"
+    >
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+        <path d="M7 4v16M17 4v16M4 8h6M14 16h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
     </button>
   </div>
 </article>

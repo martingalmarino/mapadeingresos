@@ -1,5 +1,6 @@
 ---
 import { navItems, site } from '../data/site';
+import BrandMark from './BrandMark.astro';
 
 const path = Astro.url.pathname;
 ---
@@ -7,7 +8,10 @@ const path = Astro.url.pathname;
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="wordmark" href="/">{site.name.replace('.ar', '')}<span>.ar</span></a>
+    <a class="wordmark" href="/">
+      <BrandMark size={32} />
+      <span class="wordmark-text">{site.name.replace('.ar', '')}<span>.ar</span></span>
+    </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-toggle>
       <span class="visually-hidden">Abrir menú</span>
       Menú
@@ -20,7 +24,7 @@ const path = Astro.url.pathname;
           </a>
         ))
       }
-      <a class="button-primary header-cta" href="/oportunidades/">Explorar oportunidades</a>
+      <a class="button-primary header-cta" href="/oportunidades/">Explorar</a>
     </nav>
   </div>
 </header>
