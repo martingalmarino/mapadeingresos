@@ -1,0 +1,78 @@
+---
+interface Props {
+  name: 'choose' | 'argentina' | 'evidence' | 'web' | 'community' | 'products' | 'apps' | 'camera';
+}
+
+const { name } = Astro.props;
+
+const palette: Record<string, string> = {
+  choose: '#1769d2',
+  argentina: '#7c3aed',
+  evidence: '#be185d',
+  web: '#0f766e',
+  community: '#b45309',
+  products: '#0369a1',
+  apps: '#365314',
+  camera: '#102a43',
+};
+
+const color = palette[name];
+---
+
+<svg class="guide-cover" viewBox="0 0 320 140" role="img" aria-hidden="true" width="320" height="140">
+  <rect width="320" height="140" rx="12" fill="#f7faff"></rect>
+  <path d="M0 110 L320 78 L320 140 L0 140 Z" fill={color} opacity="0.12"></path>
+  {name === 'choose' && (
+    <>
+      <circle cx="70" cy="62" r="28" fill="none" stroke={color} stroke-width="4"></circle>
+      <path d="M90 84 L118 112" stroke={color} stroke-width="6" stroke-linecap="round"></path>
+    </>
+  )}
+  {name === 'argentina' && (
+    <>
+      <rect x="54" y="36" width="70" height="46" rx="6" fill="none" stroke={color} stroke-width="4"></rect>
+      <path d="M54 52 H124" stroke={color} stroke-width="4"></path>
+      <circle cx="89" cy="68" r="8" fill={color}></circle>
+    </>
+  )}
+  {name === 'evidence' && (
+    <>
+      <rect x="58" y="32" width="86" height="78" rx="6" fill="none" stroke={color} stroke-width="4"></rect>
+      <path d="M74 58 H128 M74 74 H118 M74 90 H110" stroke={color} stroke-width="4" stroke-linecap="round"></path>
+    </>
+  )}
+  {name === 'web' && (
+    <>
+      <rect x="48" y="38" width="110" height="72" rx="8" fill="none" stroke={color} stroke-width="4"></rect>
+      <path d="M48 54 H158" stroke={color} stroke-width="4"></path>
+      <circle cx="62" cy="46" r="3" fill={color}></circle>
+    </>
+  )}
+  {name === 'community' && (
+    <>
+      <circle cx="78" cy="58" r="16" fill="none" stroke={color} stroke-width="4"></circle>
+      <circle cx="114" cy="58" r="16" fill="none" stroke={color} stroke-width="4"></circle>
+      <path d="M62 96 C62 80 130 80 130 96" fill="none" stroke={color} stroke-width="4"></path>
+    </>
+  )}
+  {name === 'products' && (
+    <>
+      <rect x="60" y="40" width="54" height="68" rx="6" fill="none" stroke={color} stroke-width="4"></rect>
+      <path d="M60 58 H114" stroke={color} stroke-width="4"></path>
+      <path d="M128 52 L168 70 L128 88 Z" fill="none" stroke={color} stroke-width="4"></path>
+    </>
+  )}
+  {name === 'apps' && (
+    <>
+      <rect x="72" y="28" width="52" height="88" rx="10" fill="none" stroke={color} stroke-width="4"></rect>
+      <rect x="84" y="44" width="28" height="48" rx="4" fill={color} opacity="0.2"></rect>
+    </>
+  )}
+  {name === 'camera' && (
+    <>
+      <rect x="58" y="52" width="86" height="54" rx="8" fill="none" stroke={color} stroke-width="4"></rect>
+      <circle cx="101" cy="79" r="14" fill="none" stroke={color} stroke-width="4"></circle>
+      <rect x="86" y="40" width="30" height="14" rx="3" fill="none" stroke={color} stroke-width="4"></rect>
+    </>
+  )}
+</svg>

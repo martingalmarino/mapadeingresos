@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchForm from '../components/SearchForm.astro';
+import OpportunityCard from '../components/OpportunityCard.astro';
+import Graphic from '../components/Graphic.astro';
+import { models } from '../data/taxonomies';
+import { curatedLists, featuredSlugs, profileTiles } from '../data/homepage';
+import { getPublishedGuides, getPublishedOpportunities, slugOf, toCardData } from '../lib/catalog';
+import { collectionJsonLd, organizationJsonLd, websiteJsonLd } from '../lib/jsonld';
+import { guidePath, profilePath } from '../lib/urls';
+
+const opportunities = await getPublishedOpportunities();
+const cards = opportunities.map(toCardData);
+const bySlug = new Map(cards.map((item) => [item.slug, item]));
+const featured = featuredSlugs.map((slug) => bySlug.get(slug)).filter((item): item is NonNullable<typeof item> => Boolean(item));
+const guides = await getPublishedGuides();
+const guideArt = {
+  'programas-afiliados-argentina': 'choose',
+  'como-monetizar-una-web': 'web',
+  'modelos-monetizacion-digital': 'evidence',
+  'vender-productos-digitales-argentina': 'products',
+  'cobrar-plataformas-internacionales-argentina': 'argentina',
+  'alternativas-google-adsense': 'web',
+} as const;
+
+const jsonLd = [
+  websiteJsonLd(),
+  organizationJsonLd(),
+  collectionJsonLd(
+    'Oportunidades para monetizar desde Argentina',
+    'Directorio editorial de programas y plataformas de monetización digital.',
+    '/',
+    featured,
+  ),
+];
+---
+
+<BaseLayout
+  title="Encontrá oportunidades para monetizar desde Argentina"
+  description="Explorá programas de afiliados, publicidad, membresías y plataformas para vender contenido. Compará requisitos y conocé qué falta verificar antes de empezar."
+  path="/"
+  jsonLd={jsonLd}
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Encontrá oportunidades para monetizar desde Argentina</h1>
+      <p class="lede">Explorá programas de afiliados, publicidad, membresías y plataformas para vender contenido. Compará requisitos y conocé qué falta verificar antes de empezar.</p>
+      <SearchForm />
+      <div class="chip-row">
+        {Object.values(models).map((model) => <a class="chip" href={model.href}>{model.label}</a>)}
+        <a class="chip" href="/redes-de-afiliacion/">Redes de afiliación</a>
+      </div>
+      <p class="fact-line">{opportunities.length} oportunidades para explorar</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Selección editorial</h2>
+      <p class="section-intro">Ocho fichas para empezar a comparar modelos distintos. No es un ranking de popularidad ni una promesa de resultados: es un recorte útil para ver afiliación local, publicidad, comunidad y productos.</p>
+      <div class="cards-grid">
+        {featured.map((item) => <OpportunityCard item={item} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="lists-grid">
+        {
+          curatedLists.map((list) => (
+            <section class="mini-list">
+              <h3><a href={list.href}>{list.title}</a></h3>
+              <ol>
+                {list.slugs.map((slug) => {
+                  const item = bySlug.get(slug);
+                  return item ? (
+                    <li>
+                      <a href={item.href}>{item.name}</a>
+                    </li>
+                  ) : null;
+                })}
+              </ol>
+            </section>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section pastel pastel-blue diagonal">
+    <div class="container">
+      <h2>¿Qué querés monetizar?</h2>
+      <p class="section-intro">Elegí un perfil según el canal que ya tenés. Cada página explica encaje, límites y fichas relacionadas.</p>
+      <div class="profile-grid">
+        {
+          profileTiles.map((tile) => (
+            <a class="tile" href={profilePath(tile.slug)}>
+              <h3>{tile.title}</h3>
+              <p>{tile.text}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Guías para decidir con más contexto</h2>
+      <p class="section-intro">Lecturas editoriales, no listados automáticos. Cada guía enlaza fichas reales y marca lo que todavía no verificamos.</p>
+      <div class="guides-grid">
+        {
+          guides.map((guide) => (
+            <a class="guide-card" href={guidePath(slugOf(guide))}>
+              <Graphic name={guideArt[slugOf(guide) as keyof typeof guideArt] ?? 'choose'} />
+              <h3>{guide.data.title}</h3>
+              <p>{guide.data.summary}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section pastel pastel-blue diagonal">
+    <div class="container explain-grid">
+      <Graphic name="choose" />
+      <div>
+        <h2>Cómo elegir una oportunidad</h2>
+        <p>Empezá por el canal que ya usás, no por la comisión más alta que viste en un anuncio. Preguntate si tu audiencia está en Argentina o afuera, qué prueba de trabajo te piden y si el cobro está documentado. La ficha sirve para comparar; la decisión sigue siendo tuya.</p>
+        <p><a href="/guias/modelos-monetizacion-digital/">Guía: qué modelo encaja con tu proyecto</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pastel pastel-lavender diagonal">
+    <div class="container explain-grid">
+      <Graphic name="argentina" />
+      <div>
+        <h2>Qué cambia cuando estás en Argentina</h2>
+        <p>Unirse, que la oferta le sirva a tu audiencia y cobrar son tres preguntas distintas. Un sitio en español no prueba que un residente argentino pueda registrarse o retirar fondos. Si un dato no está verificado, lo marcamos como pendiente.</p>
+        <p><a href="/guias/cobrar-plataformas-internacionales-argentina/">Guía: qué revisar para cobrar</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pastel pastel-pink diagonal">
+    <div class="container explain-grid">
+      <Graphic name="evidence" />
+      <div>
+        <h2>Cómo revisamos la evidencia</h2>
+        <p>Confirmamos una elegibilidad argentina solo con fuentes oficiales explícitas. No inventamos tarifas, umbrales ni testimonios. Si una landing local no alcanza para afirmar el cobro, lo dejamos abierto. Podés leer el método completo y las lagunas actuales.</p>
+        <p><a href="/metodologia/">Metodología editorial</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<script src="../scripts/directory.ts"></script>

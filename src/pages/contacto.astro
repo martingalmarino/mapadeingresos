@@ -1,0 +1,31 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { site } from '../data/site';
+import { breadcrumbJsonLd } from '../lib/jsonld';
+
+const mailto = site.contactEmail
+  ? `mailto:${site.contactEmail}?subject=${encodeURIComponent(`Sugerencia o corrección para ${site.name}`)}`
+  : null;
+---
+
+<ArticleLayout
+  title="Contacto"
+  description="Cómo sugerir una oportunidad o reportar un dato desactualizado."
+  path="/contacto/"
+  crumbs={[{ label: 'Inicio', href: '/' }, { label: 'Contacto' }]}
+  jsonLd={[breadcrumbJsonLd([{ name: 'Inicio', url: '/' }, { name: 'Contacto', url: '/contacto/' }])]}
+>
+  <h1>Contacto</h1>
+  <div class="article-body">
+    {
+      mailto ? (
+        <p>
+          Escribinos a <a href={mailto}>{site.contactEmail}</a> para sugerir una oportunidad o avisar que un campo quedó desactualizado. El asunto ya viene precargado.
+        </p>
+      ) : (
+        <p class="notice">El canal de contacto todavía se está preparando. No hay un formulario activo ni un correo público configurado. Mientras tanto, podés seguir navegando el <a href="/oportunidades/">directorio</a>, las <a href="/guias/">guías</a> o la <a href="/metodologia/">metodología</a>.</p>
+      )
+    }
+    <p>No pedimos datos personales en esta página. No hay newsletter ni cuenta de usuario.</p>
+  </div>
+</ArticleLayout>

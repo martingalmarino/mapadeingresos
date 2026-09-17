@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { platformTypes, eligibilityLabels, models } from '../../data/taxonomies';
+import { getPublishedOpportunities, slugOf } from '../../lib/catalog';
+import { opportunityPath } from '../../lib/urls';
+
+const opportunities = await getPublishedOpportunities();
+const rows = opportunities.map((entry) => {
+  const slug = slugOf(entry);
+  return {
+    slug,
+    name: entry.data.name,
+    href: opportunityPath(slug),
+    type: platformTypes[entry.data.platformType].label,
+    isNetwork: platformTypes[entry.data.platformType].isNetwork,
+    models: entry.data.models.map((model) => models[model].label).join(', '),
+    audience: entry.data.audienceFit,
+    website: entry.data.requirements.websiteRequired === null ? null : entry.data.requirements.websiteRequired ? 'Sí' : 'No',
+    threshold: entry.data.requirements.audienceThreshold,
+    approval: entry.data.requirements.approvalRequired === null ? null : entry.data.requirements.approvalRequired ? 'Requiere revisión' : 'No consta revisión previa',
+    eligibility: eligibilityLabels[entry.data.argentinaEligibility].label,
+    eligibilityNote: entry.data.argentinaEligibilityNote,
+    payouts: entry.data.argentinaPayoutMethods,
+    currency: entry.data.payoutCurrency,
+    minimum: entry.data.minimumPayout,
+    timing: entry.data.payoutTiming,
+    earning: entry.data.earningModel,
+    rate: entry.data.commissionRate,
+  };
+});
+---
+
+<BaseLayout
+  title="Comparar oportunidades"
+  description="Compará hasta tres fichas por modelo, audiencia, requisitos, evidencia argentina y cobro verificado."
+  path="/comparar/"
+  noindex
+>
+  <section class="section">
+    <div class="container">
+      <h1>Comparar oportunidades</h1>
+      <p class="section-intro">Elegí hasta tres fichas desde el directorio. Esta página no se indexa y no implica que las comisiones sean comparables entre modelos distintos. Una red no es un programa individual: el tipo queda visible en cada columna.</p>
+      <noscript>
+        <p class="notice">Sin JavaScript no armamos la tabla interactiva. Abrí las fichas desde el <a href="/oportunidades/">directorio</a>.</p>
+      </noscript>
+      <p data-compare-status class="fact-line">Cargá hasta tres fichas para ver la tabla.</p>
+      <div data-compare-root></div>
+      <script type="application/json" id="compare-data" set:html={JSON.stringify(rows)} />
+    </div>
+  </section>
+</BaseLayout>
+<script>
+  import { getCompareSlugs } from '../../scripts/comparison';
+
+  const unknown = (value: string | string[] | null | undefined) => {
+    if (value === null || value === undefined || value.length === 0) return '<span class="unknown">Pendiente de verificar</span>';
+    return Array.isArray(value) ? value.join(', ') : value;
+  };
+
+  const root = document.querySelector('[data-compare-root]');
+  const status = document.querySelector('[data-compare-status]');
+  const data = JSON.parse(document.getElementById('compare-data')?.textContent ?? '[]') as Array<Record<string, string | string[] | boolean | null>>;
+  const selected = getCompareSlugs()
+    .map((slug) => data.find((row) => row.slug === slug))
+    .filter(Boolean);
+
+  if (status) {
+    status.textContent = selected.length
+      ? `Comparando ${selected.length} ficha${selected.length === 1 ? '' : 's'}.`
+      : 'Todavía no hay fichas en la comparación. Marcalas con el botón Comparar en el directorio.';
+  }
+
+  if (root && selected.length > 0) {
+    const fields: Array<[string, string]> = [
+      ['type', 'Tipo de plataforma'],
+      ['models', 'Modelo de ingreso'],
+      ['audience', 'Audiencia'],
+      ['website', '¿Pide sitio web?'],
+      ['threshold', 'Umbral de audiencia'],
+      ['approval', 'Aprobación'],
+      ['eligibility', 'Alta en Argentina'],
+      ['eligibilityNote', 'Nota de evidencia'],
+      ['payouts', 'Métodos de cobro verificados'],
+      ['currency', 'Moneda'],
+      ['minimum', 'Mínimo de cobro'],
+      ['timing', 'Plazo'],
+      ['earning', 'Cómo se gana'],
+      ['rate', 'Tasa o rango (si está documentado)'],
+    ];
+    root.innerHTML = `
+      <div style="overflow:auto">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Campo</th>
+              ${selected.map((row) => `<th>${row?.isNetwork ? 'Red · ' : ''}<a href="${row?.href}">${row?.name}</a></th>`).join('')}
+            </tr>
+          </thead>
+          <tbody>
+            ${fields
+              .map(
+                ([key, label]) => `
+              <tr>
+                <th scope="row">${label}</th>
+                ${selected.map((row) => `<td>${unknown(row?.[key] as string | string[] | null)}</td>`).join('')}
+              </tr>`,
+              )
+              .join('')}
+          </tbody>
+        </table>
+      </div>`;
+  }
+</script>

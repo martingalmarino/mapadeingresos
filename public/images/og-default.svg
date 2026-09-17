@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="mapadeingresos.ar">
+  <rect width="1200" height="630" fill="#F7FAFF"/>
+  <rect y="470" width="1200" height="160" fill="#08263B"/>
+  <path d="M0 430 L1200 380 L1200 480 L0 530 Z" fill="#EDF6FF"/>
+  <text x="80" y="170" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="#102A43">mapadeingresos<tspan fill="#1769D2">.ar</tspan></text>
+  <text x="80" y="250" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="#526477">Oportunidades para monetizar desde Argentina</text>
+  <text x="80" y="560" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#C5D4E3">Directorio editorial - 25 fichas - sin promesas de ingresos</text>
+</svg>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Página no encontrada"
+  description={`Esa ruta no existe en ${site.name}.`}
+  path="/404.html"
+  noindex
+>
+  <section class="section">
+    <div class="container">
+      <h1>No encontramos esa página</h1>
+      <p class="lede">Puede que el enlace esté desactualizado. Estas salidas suelen resolverlo:</p>
+      <ul>
+        <li><a href="/oportunidades/">Directorio de oportunidades</a></li>
+        <li><a href="/categorias/">Categorías</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/">Inicio</a></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

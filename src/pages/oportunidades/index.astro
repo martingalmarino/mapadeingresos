@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DirectoryFilters from '../../components/DirectoryFilters.astro';
+import OpportunityCard from '../../components/OpportunityCard.astro';
+import { getPublishedOpportunities, toCardData } from '../../lib/catalog';
+import { collectionJsonLd } from '../../lib/jsonld';
+import { site } from '../../data/site';
+
+const opportunities = await getPublishedOpportunities();
+const cards = opportunities.map(toCardData);
+---
+
+<BaseLayout
+  title="Directorio de oportunidades"
+  description="Las 25 fichas del directorio, con filtros por modelo, canal, tipo de plataforma y evidencia de alta en Argentina."
+  path="/oportunidades/"
+  jsonLd={[collectionJsonLd('Directorio de oportunidades', `Catálogo completo de ${site.name}.`, '/oportunidades/', cards)]}
+>
+  <section class="section">
+    <div class="container">
+      <h1>Oportunidades para explorar</h1>
+      <p class="section-intro">Las {cards.length} fichas están en esta página. Sin JavaScript seguís viendo el catálogo completo y los enlaces a cada ficha. Los filtros combinan grupos con Y, y opciones dentro de un mismo grupo con O.</p>
+      <DirectoryFilters />
+      <div class="cards-grid" data-directory-grid>
+        {cards.map((item) => <OpportunityCard item={item} />)}
+      </div>
+      <div class="empty-state" data-empty-state hidden>
+        <h2>No hay fichas con esa combinación</h2>
+        <p>Probá quitar un filtro o <a href="/oportunidades/">volver al directorio completo</a>. Un estado “pendiente de verificar” no es lo mismo que “no disponible”.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<script src="../../scripts/directory.ts"></script>

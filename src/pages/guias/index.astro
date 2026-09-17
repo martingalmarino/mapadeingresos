@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import Graphic from '../../components/Graphic.astro';
+import { slugOf } from '../../lib/catalog';
+import { breadcrumbJsonLd } from '../../lib/jsonld';
+import { formatDisplayDate, guidePath } from '../../lib/urls';
+
+const guides = (await getCollection('guides')).sort(
+  (a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime(),
+);
+const guideArt = {
+  'programas-afiliados-argentina': 'choose',
+  'como-monetizar-una-web': 'web',
+  'modelos-monetizacion-digital': 'evidence',
+  'vender-productos-digitales-argentina': 'products',
+  'cobrar-plataformas-internacionales-argentina': 'argentina',
+  'alternativas-google-adsense': 'web',
+} as const;
+---
+
+<ArticleLayout
+  title="Guías de monetización digital"
+  description="Lecturas editoriales para elegir modelos, evaluar programas y revisar el cobro desde Argentina."
+  path="/guias/"
+  crumbs={[
+    { label: 'Inicio', href: '/' },
+    { label: 'Guías' },
+  ]}
+  jsonLd={[breadcrumbJsonLd([{ name: 'Inicio', url: '/' }, { name: 'Guías', url: '/guias/' }])]}
+>
+  <h1>Guías para decidir con evidencia</h1>
+  <p class="lede">Seis piezas con intención de búsqueda distinta. No son rankings ni recetas de ingresos. Sirven para formular mejores preguntas antes de pedir el alta.</p>
+  <div class="guides-grid">
+    {
+      guides.map((guide) => (
+        <a class="guide-card" href={guidePath(slugOf(guide))}>
+          <Graphic name={guideArt[slugOf(guide) as keyof typeof guideArt] ?? 'choose'} />
+          <h2>{guide.data.title}</h2>
+          <p>{guide.data.summary}</p>
+          <p class="fact-line">{formatDisplayDate(guide.data.publishedAt)}</p>
+        </a>
+      ))
+    }
+  </div>
+</ArticleLayout>

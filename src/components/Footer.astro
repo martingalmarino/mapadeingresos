@@ -1,0 +1,29 @@
+---
+import { footerGroups, site } from '../data/site';
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="wordmark" href="/" style="color:#fff">{site.name.replace('.ar', '')}<span>.ar</span></a>
+      <p>Directorio editorial de oportunidades de monetización digital. No prometemos ingresos ni ranking de popularidad.</p>
+    </div>
+    {
+      footerGroups.map((group) => (
+        <div>
+          <h2>{group.title}</h2>
+          <ul>
+            {group.links.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+  <div class="container footer-bottom">
+    <p>© {new Date().getFullYear()} {site.name}. Contenido en español de Argentina. Las condiciones de cada plataforma pueden cambiar.</p>
+  </div>
+</footer>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  placeholder?: string;
+  id?: string;
+}
+
+const { placeholder = 'Buscá una plataforma o un modelo…', id = 'busqueda' } = Astro.props;
+---
+
+<form class="search-shell" action="/oportunidades/" method="get" data-enhanced-search>
+  <label class="visually-hidden" for={id}>Buscar oportunidades</label>
+  <input id={id} type="search" placeholder={placeholder} autocomplete="off" />
+  <button type="submit" aria-label="Ir al directorio">Buscar</button>
+</form>
+<noscript>
+  <p class="fact-line"><a href="/oportunidades/">Ver el directorio completo</a> — la búsqueda con texto necesita JavaScript.</p>
+</noscript>

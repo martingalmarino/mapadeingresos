@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+import '@fontsource-variable/source-sans-3/wght.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ComparisonTray from '../components/ComparisonTray.astro';
+import SEO from '../components/SEO.astro';
+import { site } from '../data/site';
+import { absoluteUrl } from '../lib/urls';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  jsonLd?: unknown[];
+}
+
+const { title, description, path, noindex = false, ogType = 'website', jsonLd = [] } = Astro.props;
+const canonical = absoluteUrl(path, site.origin);
+const pageTitle = title.includes(site.name) ? title : `${title} · ${site.name}`;
+---
+
+<!doctype html>
+<html lang={site.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO title={pageTitle} description={description} canonical={canonical} noindex={noindex} ogType={ogType} jsonLd={jsonLd} />
+  </head>
+  <body>
+    <Header />
+    <main id="contenido">
+      <slot />
+    </main>
+    <ComparisonTray />
+    <Footer />
+    <script>
+      import '../scripts/comparison';
+    </script>
+  </body>
+</html>

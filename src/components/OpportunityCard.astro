@@ -1,0 +1,43 @@
+---
+import type { OpportunityCardData } from '../lib/catalog';
+import { initials, markColor } from '../lib/text';
+import { models } from '../data/taxonomies';
+import VerificationBadge from './VerificationBadge.astro';
+
+interface Props {
+  item: OpportunityCardData;
+}
+
+const { item } = Astro.props;
+---
+
+<article
+  class="opportunity-card"
+  data-opportunity-card
+  data-slug={item.slug}
+  data-name={item.name}
+  data-summary={item.summary}
+  data-models={item.models.join(',')}
+  data-channels={item.channels.join(',')}
+  data-niches={item.niches.join(',')}
+  data-type={item.platformType}
+  data-eligibility={item.argentinaEligibility}
+  data-featured={String(item.featured)}
+>
+  <div class="card-top">
+    <div class="mark" style={`background:${markColor(item.slug)}`} aria-hidden="true">{initials(item.name)}</div>
+    <VerificationBadge status={item.argentinaEligibility} compact />
+  </div>
+  <h3>{item.name}</h3>
+  <p>{item.summary}</p>
+  <div class="badge-row">
+    {item.models.map((model) => <span class="badge">{models[model].label}</span>)}
+    {item.isNetwork && <span class="badge">Red</span>}
+  </div>
+  <div class="card-actions">
+    <a class="button-primary" href={item.href}>Ver ficha</a>
+    <button class="compare-toggle" type="button" data-compare-toggle={item.slug} aria-pressed="false">
+      Comparar
+    </button>
+  </div>
+</article>

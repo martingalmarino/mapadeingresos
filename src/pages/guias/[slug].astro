@@ -1,0 +1,100 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import Graphic from '../../components/Graphic.astro';
+import OpportunityCard from '../../components/OpportunityCard.astro';
+import SourceList from '../../components/SourceList.astro';
+import { getPublishedOpportunities, slugOf, toCardData } from '../../lib/catalog';
+import { articleJsonLd, breadcrumbJsonLd } from '../../lib/jsonld';
+import { formatDisplayDate, guidePath } from '../../lib/urls';
+
+const guideArt = {
+  'programas-afiliados-argentina': 'choose',
+  'como-monetizar-una-web': 'web',
+  'modelos-monetizacion-digital': 'evidence',
+  'vender-productos-digitales-argentina': 'products',
+  'cobrar-plataformas-internacionales-argentina': 'argentina',
+  'alternativas-google-adsense': 'web',
+} as const;
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  const opportunities = await getPublishedOpportunities();
+  const allGuides = new Map(guides.map((guide) => [guide.id, guide]));
+  return guides.map((entry) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      relatedOpps: opportunities.filter((item) => entry.data.relatedOpportunitySlugs.includes(slugOf(item))),
+      relatedGuides: entry.data.relatedGuideSlugs
+        .map((slug) => allGuides.get(slug))
+        .filter((item): item is NonNullable<typeof item> => Boolean(item)),
+    },
+  }));
+}
+
+const { entry, relatedOpps, relatedGuides } = Astro.props;
+const { Content } = await render(entry);
+const path = guidePath(entry.id);
+---
+
+<ArticleLayout
+  title={entry.data.seoTitle}
+  description={entry.data.seoDescription}
+  path={path}
+  ogType="article"
+  crumbs={[
+    { label: 'Inicio', href: '/' },
+    { label: 'Guías', href: '/guias/' },
+    { label: entry.data.title },
+  ]}
+  jsonLd={[
+    breadcrumbJsonLd([
+      { name: 'Inicio', url: '/' },
+      { name: 'Guías', url: '/guias/' },
+      { name: entry.data.title, url: path },
+    ]),
+    articleJsonLd({
+      headline: entry.data.title,
+      description: entry.data.seoDescription,
+      url: path,
+      datePublished: entry.data.publishedAt,
+      dateModified: entry.data.contentUpdatedAt,
+    }),
+  ]}
+>
+  <p class="fact-line">Actualizado el {formatDisplayDate(entry.data.contentUpdatedAt)}</p>
+  <h1>{entry.data.title}</h1>
+  <Graphic name={guideArt[entry.id as keyof typeof guideArt] ?? 'choose'} />
+  <p class="lede">{entry.data.summary}</p>
+  <div class="article-body">
+    <Content />
+  </div>
+  {
+    relatedOpps.length > 0 && (
+      <section>
+        <h2>Fichas para seguir leyendo</h2>
+        <div class="cards-grid">
+          {relatedOpps.map((item) => (
+            <OpportunityCard item={toCardData(item)} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+  {
+    relatedGuides.length > 0 && (
+      <section>
+        <h2>Otras guías</h2>
+        <ul>
+          {relatedGuides.map((guide) => (
+            <li>
+              <a href={guidePath(guide.id)}>{guide.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+  <SourceList sources={entry.data.sources} />
+</ArticleLayout>

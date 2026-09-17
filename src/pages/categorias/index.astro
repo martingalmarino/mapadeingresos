@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { models } from '../../data/taxonomies';
+import { breadcrumbJsonLd } from '../../lib/jsonld';
+import { categoryPath } from '../../lib/urls';
+
+const categories = await getCollection('categories');
+---
+
+<ArticleLayout
+  title="Categorías de monetización"
+  description="Cinco modelos de ingreso para comparar: afiliación, publicidad, membresías, productos digitales y licencias de contenido."
+  path="/categorias/"
+  crumbs={[
+    { label: 'Inicio', href: '/' },
+    { label: 'Categorías' },
+  ]}
+  jsonLd={[breadcrumbJsonLd([{ name: 'Inicio', url: '/' }, { name: 'Categorías', url: '/categorias/' }])]}
+>
+  <h1>Categorías de monetización</h1>
+  <p class="lede">Agrupamos las fichas por la forma de generar ingresos, no por popularidad. Una red de afiliación no es un sexto modelo: es un tipo de plataforma dentro de la afiliación.</p>
+  <div class="category-grid">
+    {
+      categories.map((entry) => {
+        const model = models[entry.id as keyof typeof models];
+        return (
+          <a class="tile" href={categoryPath(entry.id)}>
+            <h2>{entry.data.title}</h2>
+            <p>{entry.data.summary}</p>
+            {model && <p>{model.description}</p>}
+          </a>
+        );
+      })
+    }
+    <a class="tile" href="/redes-de-afiliacion/">
+      <h2>Redes de afiliación</h2>
+      <p>Hub para descubrir varios anunciantes. El alta en la red y la aceptación de cada marca son chequeos distintos.</p>
+    </a>
+  </div>
+</ArticleLayout>

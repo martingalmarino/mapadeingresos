@@ -1,0 +1,38 @@
+---
+import { navItems, site } from '../data/site';
+
+const path = Astro.url.pathname;
+---
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">{site.name.replace('.ar', '')}<span>.ar</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-toggle>
+      <span class="visually-hidden">Abrir menú</span>
+      Menú
+    </button>
+    <nav class="nav" id="menu-principal" data-nav aria-label="Principal">
+      {
+        navItems.map((item) => (
+          <a href={item.href} aria-current={path.startsWith(item.href) ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))
+      }
+      <a class="button-primary header-cta" href="/oportunidades/">Explorar oportunidades</a>
+    </nav>
+  </div>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const nav = document.querySelector<HTMLElement>('[data-nav]');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('is-open', !open);
+      toggle.querySelector('.visually-hidden')!.textContent = open ? 'Abrir menú' : 'Cerrar menú';
+    });
+  }
+</script>

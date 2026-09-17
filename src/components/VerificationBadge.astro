@@ -1,0 +1,16 @@
+---
+import { eligibilityLabels, type EligibilityId } from '../data/taxonomies';
+
+interface Props {
+  status: EligibilityId;
+  compact?: boolean;
+}
+
+const { status, compact = false } = Astro.props;
+const item = eligibilityLabels[status];
+---
+
+<span class="badge badge-status" data-status={status} title={item.hint}>
+  <span aria-hidden="true">{status === 'confirmed' ? '●' : status === 'conditional' ? '◐' : status === 'unavailable' ? '×' : '?'}</span>
+  {compact ? item.shortLabel : item.label}
+</span>

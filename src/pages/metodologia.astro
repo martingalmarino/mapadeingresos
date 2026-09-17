@@ -1,0 +1,33 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { breadcrumbJsonLd } from '../lib/jsonld';
+---
+
+<ArticleLayout
+  title="Cómo elegimos y revisamos"
+  description="Criterios editoriales, estados de verificación y límites de este directorio."
+  path="/metodologia/"
+  crumbs={[{ label: 'Inicio', href: '/' }, { label: 'Metodología' }]}
+  jsonLd={[breadcrumbJsonLd([{ name: 'Inicio', url: '/' }, { name: 'Metodología', url: '/metodologia/' }])]}
+>
+  <h1>Cómo elegimos</h1>
+  <div class="article-body">
+    <p>Cada ficha cubre una plataforma o un programa, aunque esa plataforma tenga más de un modelo de ingreso. Una red no se describe como si fuera un programa individual. Una plataforma para vender productos propios no se etiqueta como afiliación salvo cuando esa modalidad está documentada.</p>
+    <h2>Las tres preguntas de Argentina</h2>
+    <ol>
+      <li>¿Puede unirse un residente en Argentina?</li>
+      <li>¿La oferta es relevante para una audiencia en Argentina o en el exterior?</li>
+      <li>¿Cómo puede cobrar un participante argentino?</li>
+    </ol>
+    <p>Confirmamos el alta en Argentina solo con evidencia oficial explícita: una lista de países o un programa claramente local. Un sitio en español no alcanza. Una homepage genérica sirve para explicar la función, no para afirmar pagos locales.</p>
+    <h2>Estados de verificación</h2>
+    <ul>
+      <li><strong>Confirmada:</strong> hay fuente oficial de disponibilidad para unirse.</li>
+      <li><strong>Condicional:</strong> existe una vía plausible, con matices o evidencia incompleta.</li>
+      <li><strong>Pendiente:</strong> todavía no hay prueba suficiente.</li>
+      <li><strong>No disponible:</strong> la evidencia indica que no aplica o no hay programa equivalente.</li>
+    </ul>
+    <p>La selección editorial de la portada no es un ranking. Elegimos fichas que cubren modelos distintos y ayudan a comparar. No usamos contadores de usuarios, valoraciones inventadas ni promesas de ingresos.</p>
+    <p>Las lagunas concretas de esta primera versión están listadas en el archivo de revisión del repositorio y, en cada ficha, junto al campo que falta.</p>
+  </div>
+</ArticleLayout>

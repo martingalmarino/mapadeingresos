@@ -1,0 +1,20 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { breadcrumbJsonLd } from '../lib/jsonld';
+---
+
+<ArticleLayout
+  title="Transparencia"
+  description="Cómo se etiquetarán futuros enlaces de afiliado o menciones pagas, y qué relaciones no existen hoy."
+  path="/transparencia/"
+  crumbs={[{ label: 'Inicio', href: '/' }, { label: 'Transparencia' }]}
+  jsonLd={[breadcrumbJsonLd([{ name: 'Inicio', url: '/' }, { name: 'Transparencia', url: '/transparencia/' }])]}
+>
+  <h1>Transparencia</h1>
+  <div class="article-body">
+    <p>En esta primera versión no hay enlaces de afiliado configurados, ni sponsors, ni avisos publicitarios de terceros. Los botones “Ir al sitio oficial” apuntan a URLs públicas de cada plataforma.</p>
+    <p>Si en el futuro se configura un <code>affiliateUrl</code> real, el enlace de salida se etiquetará como patrocinado, se abrirá con <code>rel="sponsored noopener"</code> y la ficha lo dirá cerca del botón. No vamos a inventar códigos de referido.</p>
+    <p>Las menciones pagas o los acuerdos de contenido, si existieran, se declararían en esta página y en la ficha afectada. Hasta que eso ocurra, no hay logos de “partners” ni testimonios de marcas.</p>
+    <p>La selección editorial se explica en la <a href="/metodologia/">metodología</a>. No se compra un lugar en la grilla destacada de esta versión.</p>
+  </div>
+</ArticleLayout>

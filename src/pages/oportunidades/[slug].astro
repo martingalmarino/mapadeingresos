@@ -1,0 +1,120 @@
+---
+import { render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import OpportunityCard from '../../components/OpportunityCard.astro';
+import SourceList from '../../components/SourceList.astro';
+import VerificationBadge from '../../components/VerificationBadge.astro';
+import { channels, eligibilityLabels, models, platformTypes } from '../../data/taxonomies';
+import { getPublishedOpportunities, relatedOpportunities, slugOf, toCardData, type OpportunityEntry } from '../../lib/catalog';
+import { breadcrumbJsonLd, webPageJsonLd } from '../../lib/jsonld';
+import { initials, markColor, pendingLabel } from '../../lib/text';
+import { formatDisplayDate, opportunityPath } from '../../lib/urls';
+
+export async function getStaticPaths() {
+  const items = await getPublishedOpportunities();
+  return items.map((entry) => ({
+    params: { slug: slugOf(entry) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: OpportunityEntry;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const slug = slugOf(entry);
+const catalog = await getPublishedOpportunities();
+const related = relatedOpportunities(entry, catalog).map(toCardData);
+const data = entry.data;
+const path = opportunityPath(slug);
+const officialRel = data.affiliateUrl ? 'sponsored noopener noreferrer' : 'noopener noreferrer';
+const officialHref = data.affiliateUrl ?? data.officialUrl;
+const officialLabel = data.affiliateUrl ? 'Ir al enlace de afiliado' : 'Ir al sitio oficial';
+---
+
+<ArticleLayout
+  title={data.seoTitle}
+  description={data.seoDescription}
+  path={path}
+  crumbs={[
+    { label: 'Inicio', href: '/' },
+    { label: 'Oportunidades', href: '/oportunidades/' },
+    { label: data.name },
+  ]}
+  jsonLd={[
+    breadcrumbJsonLd([
+      { name: 'Inicio', url: '/' },
+      { name: 'Oportunidades', url: '/oportunidades/' },
+      { name: data.name, url: path },
+    ]),
+    webPageJsonLd(data.seoTitle, data.seoDescription, path),
+  ]}
+>
+  <div class="detail-layout">
+    <article>
+      <div class="card-top" style="margin-bottom:1rem">
+        <div class="mark" style={`background:${markColor(slug)}`} aria-hidden="true">{initials(data.name)}</div>
+        <VerificationBadge status={data.argentinaEligibility} />
+      </div>
+      <p class="fact-line">{platformTypes[data.platformType].label} · Actualizado el {formatDisplayDate(data.contentUpdatedAt)}</p>
+      <h1>{data.name}</h1>
+      <p class="lede">{data.summary}</p>
+      <div class="badge-row" style="margin:1rem 0">
+        {data.models.map((model) => <a class="badge" href={models[model].href}>{models[model].label}</a>)}
+        {data.channels.map((channel) => <a class="chip" href={channels[channel].href}>{channels[channel].label}</a>)}
+      </div>
+      <div class="article-body">
+        <Content />
+      </div>
+      <section>
+        <h2>Preguntas frecuentes</h2>
+        {data.faqs.map((faq) => (
+          <div>
+            <h3>{faq.question}</h3>
+            <p>{faq.answer}</p>
+          </div>
+        ))}
+      </section>
+      <SourceList sources={data.sources} />
+      {
+        related.length > 0 && (
+          <section>
+            <h2>Alternativas relacionadas</h2>
+            <div class="cards-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+              {related.map((item) => <OpportunityCard item={item} />)}
+            </div>
+          </section>
+        )
+      }
+    </article>
+    <aside class="summary-card" aria-label="Resumen de la ficha">
+      <h2 style="margin-top:0;font-size:1.1rem">Resumen</h2>
+      <dl>
+        <dt>Tipo</dt>
+        <dd>{platformTypes[data.platformType].label}</dd>
+        <dt>Alta en Argentina</dt>
+        <dd>{eligibilityLabels[data.argentinaEligibility].label}. {data.argentinaEligibilityNote}</dd>
+        <dt>Audiencia</dt>
+        <dd>{data.audienceFit}</dd>
+        <dt>Requisitos</dt>
+        <dd>
+          Sitio web: {data.requirements.websiteRequired === null ? 'Pendiente de verificar' : data.requirements.websiteRequired ? 'Sí' : 'No'}.
+          Umbral de audiencia: {pendingLabel(data.requirements.audienceThreshold)}.
+          Aprobación: {data.requirements.approvalRequired === null ? 'Pendiente de verificar' : data.requirements.approvalRequired ? 'Requiere revisión' : 'No consta una revisión previa'}.
+        </dd>
+        <dt>Cobro en Argentina</dt>
+        <dd>
+          {data.argentinaPayoutMethods ? data.argentinaPayoutMethods.join(', ') : 'Pendiente de verificar'}.
+          Moneda: {pendingLabel(data.payoutCurrency)}. Mínimo: {pendingLabel(data.minimumPayout)}.
+        </dd>
+      </dl>
+      <p style="margin-top:1rem">
+        <a class="button-primary" href={officialHref} rel={officialRel} target="_blank">{officialLabel}</a>
+      </p>
+      {data.affiliateUrl && <p class="fact-line">Este enlace de salida está etiquetado como patrocinado.</p>}
+      <p class="fact-line">Consultá siempre las condiciones vigentes en el sitio oficial. Esta ficha no garantiza admisión ni ingresos.</p>
+    </aside>
+  </div>
+</ArticleLayout>

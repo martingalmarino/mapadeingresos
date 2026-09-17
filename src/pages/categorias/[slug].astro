@@ -1,0 +1,67 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import OpportunityCard from '../../components/OpportunityCard.astro';
+import { models, type ModelId } from '../../data/taxonomies';
+import { byModel, getPublishedOpportunities, toCardData } from '../../lib/catalog';
+import { breadcrumbJsonLd, collectionJsonLd } from '../../lib/jsonld';
+import { categoryPath } from '../../lib/urls';
+
+export async function getStaticPaths() {
+  const categories = await getCollection('categories');
+  const opportunities = await getPublishedOpportunities();
+  return categories.map((entry) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      items: byModel(opportunities, entry.id as ModelId),
+    },
+  }));
+}
+
+const { entry, items } = Astro.props;
+const { Content } = await render(entry);
+const cards = items.map(toCardData);
+const path = categoryPath(entry.id);
+const model = models[entry.id as ModelId];
+---
+
+<ArticleLayout
+  title={entry.data.seoTitle}
+  description={entry.data.seoDescription}
+  path={path}
+  crumbs={[
+    { label: 'Inicio', href: '/' },
+    { label: 'Categorías', href: '/categorias/' },
+    { label: entry.data.title },
+  ]}
+  jsonLd={[
+    breadcrumbJsonLd([
+      { name: 'Inicio', url: '/' },
+      { name: 'Categorías', url: '/categorias/' },
+      { name: entry.data.title, url: path },
+    ]),
+    collectionJsonLd(entry.data.seoTitle, entry.data.seoDescription, path, cards),
+  ]}
+>
+  <p class="fact-line">{entry.data.eyebrow}</p>
+  <h1>{entry.data.title}</h1>
+  <p class="lede">{entry.data.summary}</p>
+  <div class="article-body">
+    <Content />
+  </div>
+  <h2>Cómo elegir en esta categoría</h2>
+  <ul>
+    {entry.data.selectionTips.map((tip) => <li>{tip}</li>)}
+  </ul>
+  {
+    model && (
+      <p>
+        {cards.length} ficha{cards.length === 1 ? '' : 's'} con el modelo {model.label.toLowerCase()}. Una misma plataforma puede aparecer en más de una categoría, pero la ficha canónica es única.
+      </p>
+    )
+  }
+  <div class="cards-grid">
+    {cards.map((item) => <OpportunityCard item={item} />)}
+  </div>
+</ArticleLayout>

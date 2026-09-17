@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDisplayDate } from '../lib/urls';
+
+interface Props {
+  sources: CollectionEntry<'opportunities'>['data']['sources'];
+}
+
+const { sources } = Astro.props;
+---
+
+<section class="sources" aria-labelledby="fuentes">
+  <h2 id="fuentes">Fuentes y fecha de revisión</h2>
+  <ul>
+    {
+      sources.map((source) => (
+        <li>
+          <a href={source.url} rel="noopener noreferrer">{source.title}</a>
+          <span> — campos: {source.fields.join(', ')}.</span>
+          {
+            source.checkedAt ? (
+              <span> Revisada el {formatDisplayDate(source.checkedAt)}.</span>
+            ) : (
+              <span class="unknown"> Pendiente de verificar.</span>
+            )
+          }
+        </li>
+      ))
+    }
+  </ul>
+</section>

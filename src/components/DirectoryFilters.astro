@@ -1,0 +1,52 @@
+---
+import { channels, eligibilityLabels, models, platformTypes } from '../data/taxonomies';
+
+const typeOptions = Object.entries(platformTypes).map(([id, value]) => ({ id, label: value.label }));
+---
+
+<form class="filters" data-directory-filters>
+  <div class="toolbar">
+    <div style="flex:1;min-width:min(100%,280px)">
+      <label class="visually-hidden" for="directorio-q">Filtrar por texto</label>
+      <input class="filter-search" id="directorio-q" type="search" name="q" placeholder="Buscá por nombre, resumen, categoría o nicho" autocomplete="off" />
+    </div>
+    <div>
+      <label for="orden">Orden</label>
+      <select id="orden" name="sort" style="min-height:44px;margin-left:0.4rem;font:inherit">
+        <option value="az">A-Z</option>
+        <option value="editorial">Selección editorial</option>
+      </select>
+    </div>
+  </div>
+  <div class="filters-groups">
+    <fieldset>
+      <legend>Modelo</legend>
+      {Object.entries(models).map(([id, value]) => (
+        <label><input type="checkbox" name="model" value={id} /> {value.label}</label>
+      ))}
+    </fieldset>
+    <fieldset>
+      <legend>Canal</legend>
+      {Object.entries(channels).map(([id, value]) => (
+        <label><input type="checkbox" name="channel" value={id} /> {value.label}</label>
+      ))}
+    </fieldset>
+    <fieldset>
+      <legend>Alta en Argentina</legend>
+      {Object.entries(eligibilityLabels).map(([id, value]) => (
+        <label><input type="checkbox" name="eligibility" value={id} /> {value.shortLabel}</label>
+      ))}
+    </fieldset>
+    <fieldset class="wide">
+      <legend>Tipo de plataforma</legend>
+      {typeOptions.map((option) => (
+        <label><input type="checkbox" name="type" value={option.id} /> {option.label}</label>
+      ))}
+    </fieldset>
+  </div>
+  <div class="toolbar">
+    <p aria-live="polite" data-result-count></p>
+    <button class="button-ghost" type="reset">Limpiar filtros</button>
+  </div>
+  <div class="active-chips" data-active-chips></div>
+</form>

@@ -1,0 +1,23 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { breadcrumbJsonLd } from '../lib/jsonld';
+---
+
+<ArticleLayout
+  title="Privacidad"
+  description="Qué datos trata este sitio estático y qué no hace."
+  path="/privacidad/"
+  crumbs={[{ label: 'Inicio', href: '/' }, { label: 'Privacidad' }]}
+  jsonLd={[breadcrumbJsonLd([{ name: 'Inicio', url: '/' }, { name: 'Privacidad', url: '/privacidad/' }])]}
+>
+  <h1>Privacidad</h1>
+  <div class="article-body">
+    <p>Este sitio se publica como archivos estáticos. En esta versión no instalamos scripts de analítica, publicidad ni píxeles de seguimiento. No hay cuentas, ni boletín, ni formularios que envíen datos a un servidor nuestro.</p>
+    <h2>Qué puede quedar en tu navegador</h2>
+    <p>Si usás la comparación de fichas, el listado de slugs puede guardarse en el almacenamiento local de tu navegador y en el hash de la URL. Si el almacenamiento está deshabilitado, la comparación sigue funcionando solo con la URL. Podés borrar esos datos con el botón “Vaciar” o limpiando los datos del sitio en el navegador.</p>
+    <h2>Enlaces externos</h2>
+    <p>Cuando salís hacia un sitio oficial, esa plataforma aplica su propia política. No controlamos esas prácticas.</p>
+    <h2>Contacto</h2>
+    <p>Si más adelante se configura un correo público, los mensajes que envíes se usarán solo para responder esa consulta. Hoy el canal todavía no está habilitado: ver <a href="/contacto/">contacto</a>.</p>
+  </div>
+</ArticleLayout>

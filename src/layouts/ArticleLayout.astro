@@ -1,0 +1,30 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  crumbs: Crumb[];
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  jsonLd?: unknown[];
+}
+
+const props = Astro.props;
+---
+
+<BaseLayout {...props}>
+  <div class="section">
+    <div class="container">
+      <Breadcrumbs items={props.crumbs} />
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
