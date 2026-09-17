@@ -4,13 +4,17 @@ Fecha de esta lista: 2026-09-17. No tratar estos ítems como verificados.
 
 ## Elegibilidad argentina pendiente (`unverified`)
 
-Hotmart, SiteGround Afiliados, Semrush, Adobe Affiliate, Awin, impact.com, CJ, PartnerStack, Travelpayouts, The Moneytizer, Ezoic, Patreon, Gumroad, Udemy, Adobe Stock Contributor, Ko-fi, Shutterstock Contributor.
+Hotmart, SiteGround Afiliados, Semrush, Adobe Affiliate, Awin, impact.com, CJ, PartnerStack, Travelpayouts, The Moneytizer, Ezoic, Patreon, Gumroad, Udemy, Adobe Stock Contributor, Ko-fi, Shutterstock Contributor, Shopify Afiliados, Fiverr Afiliados, Elementor Afiliados, HubSpot Afiliados, Systeme.io Afiliados, Brevo Afiliados, GetResponse Afiliados, Civitatis Afiliados, NordVPN Afiliados, Amazon KDP, Twitch, Journey by Mediavine, Facebook Content Monetization, Estrellas de Facebook, suscripciones de Instagram y suscripciones de Facebook.
 
 ## Elegibilidad condicional
 
 - **Hostinger Afiliados:** landing argentina oficial, pero el método de cobro para residentes no está documentado en la página revisada.
 - **Tiendanube Socios:** el hub oficial lista la modalidad Afiliados junto a especialistas y partners tecnológicos; faltan términos de pago de esa modalidad.
 - **Amazon Associates:** no existe un programa de Amazon Argentina. Un residente podría postularse a otro locale; la transferencia bancaria local no aparece en la ayuda de países/monedas revisada.
+- **Payhip:** documenta integración con Mercado Pago y un plan Free Forever con USD 0 de cuota mensual más cargos de transacción; no prueba retiro en tu cuenta ni “sin inversión”.
+- **Etsy (productos digitales):** Argentina figura para Etsy Payments vía Payoneer; tarifas de procesamiento de EE.UU. no se aplican automáticamente.
+- **Medium Partner Program:** la elegibilidad de país y el onboarding de pagos vía Stripe están documentados; no equivalen a una cuenta Stripe comercial independiente ni a admisión individual.
+- **Regalos de Instagram:** hay un extracto oficial indexado que menciona país; el documento completo no estuvo accesible y el cobro sigue pendiente.
 
 ## Confirmadas para el alta, con matices de cobro
 

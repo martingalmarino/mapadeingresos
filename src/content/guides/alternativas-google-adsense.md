@@ -9,6 +9,7 @@ relatedOpportunitySlugs:
   - google-adsense
   - ezoic
   - the-moneytizer
+  - journey-mediavine
   - google-admob
   - youtube-partners
 relatedGuideSlugs:

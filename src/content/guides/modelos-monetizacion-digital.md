@@ -11,8 +11,8 @@ relatedOpportunitySlugs:
   - google-adsense
   - youtube-partners
   - cafecito
-  - patreon
-  - ko-fi
+  - medium-partner-program
+  - payhip
 relatedGuideSlugs:
   - programas-afiliados-argentina
   - como-monetizar-una-web

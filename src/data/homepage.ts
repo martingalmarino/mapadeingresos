@@ -28,7 +28,12 @@ export const curatedLists = [
   {
     title: 'Vender productos digitales',
     href: '/categorias/productos-digitales/',
-    slugs: ['hotmart', 'gumroad', 'udemy', 'adobe-stock', 'shutterstock-contributor'],
+    slugs: ['hotmart', 'gumroad', 'udemy', 'payhip', 'etsy-productos-digitales'],
+  },
+  {
+    title: 'Monetización de contenido',
+    href: '/categorias/monetizacion-contenido/',
+    slugs: ['medium-partner-program', 'facebook-content-monetization', 'twitch'],
   },
 ] as const;
 

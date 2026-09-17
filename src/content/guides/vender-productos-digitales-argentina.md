@@ -9,8 +9,9 @@ relatedOpportunitySlugs:
   - hotmart
   - gumroad
   - udemy
+  - payhip
+  - etsy-productos-digitales
   - ko-fi
-  - mercado-libre-afiliados
 relatedGuideSlugs:
   - modelos-monetizacion-digital
   - como-monetizar-una-web

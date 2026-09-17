@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const opportunitiesDir = path.join(root, 'src/content/opportunities');
-const expected = [
+const requiredExisting = [
   'mercado-libre-afiliados',
   'hotmart',
   'amazon-associates',
@@ -30,6 +30,29 @@ const expected = [
   'google-admob',
   'ko-fi',
   'shutterstock-contributor',
+];
+
+const requiredNew = [
+  'shopify-afiliados',
+  'fiverr-afiliados',
+  'elementor-afiliados',
+  'hubspot-afiliados',
+  'systeme-io-afiliados',
+  'brevo-afiliados',
+  'getresponse-afiliados',
+  'civitatis-afiliados',
+  'nordvpn-afiliados',
+  'payhip',
+  'etsy-productos-digitales',
+  'amazon-kdp',
+  'twitch',
+  'medium-partner-program',
+  'journey-mediavine',
+  'facebook-content-monetization',
+  'facebook-stars',
+  'instagram-gifts',
+  'instagram-suscripciones',
+  'facebook-suscripciones',
 ];
 
 function extractFrontmatter(raw) {
@@ -63,11 +86,12 @@ const files = (await readdir(opportunitiesDir)).filter((file) => file.endsWith('
 const slugs = files.map((file) => file.replace(/\.md$/, ''));
 const errors = [];
 
-if (slugs.length !== 25) errors.push(`Expected 25 opportunities, found ${slugs.length}`);
+if (slugs.length !== 45) errors.push(`Expected 45 opportunities, found ${slugs.length}`);
 if (new Set(slugs).size !== slugs.length) errors.push('Duplicate slugs');
-for (const slug of expected) {
+for (const slug of [...requiredExisting, ...requiredNew]) {
   if (!slugs.includes(slug)) errors.push(`Missing ${slug}`);
 }
+const slugSet = new Set(slugs);
 
 const affiliateUrls = [];
 const relatedMissing = [];
@@ -83,7 +107,7 @@ for (const file of files) {
   if (getScalar(frontmatter, 'featured') === 'true') featured.push(slug);
   const related = getList(frontmatter, 'relatedSlugs');
   for (const item of related) {
-    if (!expected.includes(item) || item === slug) relatedMissing.push(`${slug} -> ${item}`);
+    if (!slugSet.has(item) || item === slug) relatedMissing.push(`${slug} -> ${item}`);
   }
   if (getScalar(frontmatter, 'argentinaEligibility') === 'confirmed') {
     if (!frontmatter.includes('argentinaEligibilitySource:') || frontmatter.includes('argentinaEligibilitySource: null')) {

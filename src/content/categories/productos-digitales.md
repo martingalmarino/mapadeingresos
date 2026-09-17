@@ -19,7 +19,7 @@ Vender un producto digital significa empaquetar conocimiento, diseño o software
 
 Este modelo encaja con personas que conocen un problema específico y pueden demostrar el resultado práctico de su material. No hace falta arrancar con una producción extensa. Una preventa transparente, una versión mínima o entrevistas con potenciales compradores pueden revelar si la necesidad existe. [Cómo vender productos digitales desde Argentina](/guias/vender-productos-digitales-argentina/) compara enfoques de Hotmart, Gumroad, Udemy y Ko-fi sin tratarlos como equivalentes.
 
-Cada plataforma resuelve una combinación diferente de vidriera, alojamiento, checkout, afiliados y entrega. Hotmart, por ejemplo, contempla tanto el rol de productor como el de afiliado: promover el producto ajeno no es lo mismo que vender el propio. Udemy funciona como marketplace de cursos; Gumroad y Ko-fi ofrecen otras relaciones entre creador y audiencia. Compará fichas verificadas en [plataformas para ganar dinero online](/oportunidades/).
+Cada plataforma resuelve una combinación diferente de vidriera, alojamiento, checkout, afiliados y entrega. Hotmart, por ejemplo, contempla tanto el rol de productor como el de afiliado: promover el producto ajeno no es lo mismo que vender el propio. Udemy funciona como marketplace de cursos; Gumroad, Payhip y Etsy cubren otras relaciones entre creador y audiencia. Amazon KDP es un circuito de publicación, no el programa Amazon Associates. Compará fichas verificadas en [plataformas para ganar dinero online](/oportunidades/).
 
 ## Checkout del comprador y cobro del vendedor
 

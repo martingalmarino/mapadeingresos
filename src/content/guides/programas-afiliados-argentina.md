@@ -9,6 +9,8 @@ relatedOpportunitySlugs:
   - mercado-libre-afiliados
   - hostinger-afiliados
   - amazon-associates
+  - shopify-afiliados
+  - civitatis-afiliados
   - awin
   - impact
   - travelpayouts

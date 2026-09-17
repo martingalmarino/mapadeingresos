@@ -19,7 +19,7 @@ Las membresías y los aportes permiten que una comunidad financie directamente a
 
 El modelo encaja con newsletters, podcasts, canales de video, proyectos culturales y comunidades de nicho que ya ofrecen una razón clara para volver. No hace falta esconder todo detrás de un pago. Muchas propuestas combinan contenido abierto para descubrimiento con encuentros, archivos, votaciones o adelantos para miembros. El punto es expresar qué recibe cada persona y qué puede cambiar.
 
-Entre las opciones del [catálogo](/oportunidades/) aparecen herramientas con lógicas distintas. Cafecito tiene una propuesta local vinculada a Mercado Pago; Patreon organiza niveles recurrentes; Ko-fi combina aportes, membresías y ventas según las funciones disponibles. El checkout que usa quien aporta no demuestra cómo, cuándo ni en qué moneda retira quien publica. Esa verificación corresponde hacerla por separado, como explica la guía para [cobrar de plataformas del exterior](/guias/cobrar-plataformas-internacionales-argentina/).
+Entre las opciones del [catálogo](/oportunidades/) aparecen herramientas con lógicas distintas. Cafecito tiene una propuesta local vinculada a Mercado Pago; Patreon organiza niveles recurrentes; Ko-fi combina aportes, membresías y ventas según las funciones disponibles. Twitch, Estrellas de Facebook, regalos de Instagram y las suscripciones de Facebook o Instagram son productos separados: no los unifiques en una sola ficha. El checkout que usa quien aporta no demuestra cómo, cuándo ni en qué moneda retira quien publica. Esa verificación corresponde hacerla por separado, como explica la guía para [cobrar de plataformas del exterior](/guias/cobrar-plataformas-internacionales-argentina/).
 
 ## Qué verificar desde Argentina
 

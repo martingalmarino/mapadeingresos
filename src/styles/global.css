@@ -439,6 +439,14 @@ h3 {
   color: #6d28d9;
 }
 
+.chip[data-tone="monetizacion-contenido"],
+.badge[data-tone="monetizacion-contenido"],
+.chip-check span[data-tone="monetizacion-contenido"] {
+  background: #e7f6ff;
+  border-color: transparent;
+  color: #0369a1;
+}
+
 .chip[data-tone="redes"],
 .badge[data-tone="redes"],
 .chip-check span[data-tone="redes"] {
@@ -976,6 +984,11 @@ h3 {
 
 .chip-check:has(input:checked) span[data-tone="licencias-contenido"] {
   background: #6d28d9;
+  color: #fff;
+}
+
+.chip-check:has(input:checked) span[data-tone="monetizacion-contenido"] {
+  background: #0369a1;
   color: #fff;
 }
 

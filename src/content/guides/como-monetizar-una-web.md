@@ -9,6 +9,7 @@ relatedOpportunitySlugs:
   - google-adsense
   - ezoic
   - the-moneytizer
+  - journey-mediavine
   - mercado-libre-afiliados
   - hostinger-afiliados
   - gumroad

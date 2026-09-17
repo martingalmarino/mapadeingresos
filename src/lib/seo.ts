@@ -29,4 +29,8 @@ export const relatedGuideByModel: Record<ModelId, { href: string; label: string 
     href: '/guias/vender-productos-digitales-argentina/',
     label: 'cómo vender productos digitales y licenciar contenido',
   },
+  'monetizacion-contenido': {
+    href: '/guias/modelos-monetizacion-digital/',
+    label: 'modelos de monetización digital y cómo elegir',
+  },
 };

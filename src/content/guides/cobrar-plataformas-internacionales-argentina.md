@@ -10,7 +10,7 @@ relatedOpportunitySlugs:
   - google-admob
   - youtube-partners
   - cafecito
-  - patreon
+  - payhip
   - gumroad
   - ko-fi
 relatedGuideSlugs:

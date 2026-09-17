@@ -67,6 +67,7 @@ export const footerGroups = [
       { href: '/categorias/membresias-aportes/', label: 'Membresías y aportes' },
       { href: '/categorias/productos-digitales/', label: 'Productos digitales' },
       { href: '/categorias/licencias-contenido/', label: 'Licencias de contenido' },
+      { href: '/categorias/monetizacion-contenido/', label: 'Monetización de contenido' },
     ],
   },
   {

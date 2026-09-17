@@ -4,6 +4,7 @@ export const modelIds = [
   'membresias-aportes',
   'productos-digitales',
   'licencias-contenido',
+  'monetizacion-contenido',
 ] as const;
 
 export type ModelId = (typeof modelIds)[number];
@@ -82,6 +83,12 @@ export const models: Record<
     shortLabel: 'Licencias',
     description: 'Regalías por licenciar fotos, videos, ilustraciones u otros archivos aceptados.',
     href: '/categorias/licencias-contenido/',
+  },
+  'monetizacion-contenido': {
+    label: 'Monetización de contenido',
+    shortLabel: 'Contenido',
+    description: 'Programas que remuneran contenido original según lecturas, interacción u otras métricas elegibles.',
+    href: '/categorias/monetizacion-contenido/',
   },
 };
 
