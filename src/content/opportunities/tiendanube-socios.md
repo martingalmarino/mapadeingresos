@@ -42,8 +42,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: 2026-09-17
 reviewStatus: published
-seoTitle: "Tiendanube Socios: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Tiendanube Socios, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Tiendanube Socios: cómo funciona y requisitos"
+seoDescription: "Modalidad Afiliados de Tiendanube Socios. El hub local existe; los términos de pago de esa modalidad faltan verificar."
 relatedSlugs: ["mercado-libre-afiliados", "hotmart", "hostinger-afiliados"]
 featured: false
 featuredRationale: null

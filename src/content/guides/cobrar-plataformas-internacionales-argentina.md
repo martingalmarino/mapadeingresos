@@ -1,8 +1,8 @@
 ---
 title: Cómo verificar cobros de plataformas internacionales desde Argentina
 summary: Un checklist para comprobar elegibilidad, liquidación y retiro sin confundir pagos del comprador con payouts al creador.
-seoTitle: Cobrar plataformas internacionales desde Argentina
-seoDescription: Verificá identidad, moneda, umbral y retiro de plataformas desde Argentina sin asumir que el checkout confirma el payout.
+seoTitle: "Cobrar de plataformas del exterior: qué verificar"
+seoDescription: "Métodos de cobro para creadores: identidad, moneda, umbral y retiro. No es asesoramiento impositivo ni cambiario."
 publishedAt: 2026-09-17
 contentUpdatedAt: 2026-09-17
 relatedOpportunitySlugs:

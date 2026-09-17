@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "PartnerStack: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona PartnerStack, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "PartnerStack: afiliados de software y requisitos"
+seoDescription: "PartnerStack agrupa programas SaaS. El cobro desde Argentina no está verificado; cada socio define sus reglas."
 relatedSlugs: ["awin", "impact", "semrush-afiliados"]
 featured: false
 featuredRationale: null

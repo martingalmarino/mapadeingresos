@@ -11,22 +11,22 @@ export const featuredSlugs = [
 
 export const curatedLists = [
   {
-    title: 'Afiliación',
+    title: 'Programas de afiliados',
     href: '/categorias/afiliacion/',
     slugs: ['mercado-libre-afiliados', 'hostinger-afiliados', 'amazon-associates', 'semrush-afiliados', 'awin'],
   },
   {
-    title: 'Publicidad',
+    title: 'Publicidad para sitios, video y apps',
     href: '/categorias/publicidad/',
     slugs: ['google-adsense', 'the-moneytizer', 'ezoic', 'google-admob', 'youtube-partners'],
   },
   {
-    title: 'Comunidad',
+    title: 'Membresías y aportes',
     href: '/categorias/membresias-aportes/',
     slugs: ['cafecito', 'patreon', 'ko-fi', 'youtube-partners'],
   },
   {
-    title: 'Productos y recursos',
+    title: 'Vender productos digitales',
     href: '/categorias/productos-digitales/',
     slugs: ['hotmart', 'gumroad', 'udemy', 'adobe-stock', 'shutterstock-contributor'],
   },

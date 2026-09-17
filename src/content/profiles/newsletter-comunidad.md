@@ -1,9 +1,9 @@
 ---
-title: Newsletter o comunidad
+title: Cómo monetizar una newsletter o comunidad
 eyebrow: Perfil por canal
-summary: Opciones para monetizar una relación recurrente mediante recomendaciones, membresías y ofertas propias.
-seoTitle: Monetizar newsletters y comunidades
-seoDescription: Diseñá afiliación, membresías o productos para una newsletter o comunidad gestionada desde Argentina.
+summary: Encaje de una newsletter de pago, suscripciones online y aportes, más las herramientas que mejor acompañan esa relación.
+seoTitle: Cómo monetizar una newsletter o comunidad
+seoDescription: Compará afiliados, membresías y productos para una newsletter o comunidad. El checkout del lector no prueba tu cobro desde Argentina.
 selectionTips:
   - Priorizá confianza, frecuencia sostenible y consentimiento de la audiencia.
   - Definí beneficios de membresía que puedas entregar incluso en meses exigentes.

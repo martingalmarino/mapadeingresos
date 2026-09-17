@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Hotmart: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Hotmart, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Hotmart en Argentina: afiliados y productos digitales"
+seoDescription: "Cómo funciona Hotmart para afiliados y para vender cursos. El retiro para residentes argentinos sigue pendiente de verificar."
 relatedSlugs: ["gumroad", "udemy", "ko-fi", "mercado-libre-afiliados"]
 featured: true
 featuredRationale: "Permite comparar en una misma ficha la afiliación y la venta de productos propios, que tienen costos y responsabilidades diferentes."

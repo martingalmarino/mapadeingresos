@@ -1,9 +1,9 @@
 ---
-title: Fotografía o diseño
+title: "Monetizá tus fotografías y diseños: opciones"
 eyebrow: Perfil por canal
-summary: Alternativas para licenciar archivos, vender recursos y recomendar herramientas desde una práctica visual.
-seoTitle: Monetizar fotografía y diseño
-seoDescription: Explorá licencias, productos y afiliación para fotografía o diseño, con cobros a verificar desde Argentina.
+summary: "Ingresos para diseñadores y fotógrafos: vender contenido de stock, productos propios o recomendar herramientas."
+seoTitle: "Monetizá tus fotografías y diseños: opciones"
+seoDescription: Compará bancos de imágenes, productos propios y afiliados según los activos que ya tenés, sin inventar regalías.
 selectionTips:
   - Separá stock, encargos y productos propios al evaluar esfuerzo y derechos.
   - Conservá originales, permisos y registros de cada obra.

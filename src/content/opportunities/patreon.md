@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Patreon: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Patreon, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Patreon en Argentina: cómo funciona y qué verificar"
+seoDescription: "Membresías en Patreon para creadores. El checkout del miembro no prueba el retiro para una cuenta argentina."
 relatedSlugs: ["cafecito", "ko-fi", "youtube-partners"]
 featured: false
 featuredRationale: null

@@ -31,7 +31,7 @@ export const contactEmail =
 
 export const site = {
   name: 'mapadeingresos.ar',
-  tagline: 'Oportunidades para monetizar desde Argentina',
+  tagline: 'Formas de ganar dinero por internet desde Argentina',
   origin: siteOrigin,
   locale: 'es-AR',
   language: 'es',
@@ -53,7 +53,7 @@ export const footerGroups = [
   {
     title: 'Directorio',
     links: [
-      { href: '/oportunidades/', label: 'Todas las oportunidades' },
+      { href: '/oportunidades/', label: 'Plataformas para ganar dinero online' },
       { href: '/redes-de-afiliacion/', label: 'Redes de afiliación' },
       { href: '/comparar/', label: 'Comparar' },
       { href: '/perfiles/principiantes/', label: 'Para principiantes' },
@@ -62,7 +62,7 @@ export const footerGroups = [
   {
     title: 'Categorías',
     links: [
-      { href: '/categorias/afiliacion/', label: 'Afiliación' },
+      { href: '/categorias/afiliacion/', label: 'Programas de afiliados' },
       { href: '/categorias/publicidad/', label: 'Publicidad' },
       { href: '/categorias/membresias-aportes/', label: 'Membresías y aportes' },
       { href: '/categorias/productos-digitales/', label: 'Productos digitales' },
@@ -72,8 +72,8 @@ export const footerGroups = [
   {
     title: 'Guías',
     links: [
-      { href: '/guias/programas-afiliados-argentina/', label: 'Afiliados en Argentina' },
-      { href: '/guias/como-monetizar-una-web/', label: 'Monetizar una web' },
+      { href: '/guias/programas-afiliados-argentina/', label: 'Elegir un programa de afiliados' },
+      { href: '/guias/como-monetizar-una-web/', label: 'Monetizar una página web' },
       { href: '/guias/modelos-monetizacion-digital/', label: 'Elegir un modelo' },
       { href: '/guias/cobrar-plataformas-internacionales-argentina/', label: 'Cobrar desde Argentina' },
     ],

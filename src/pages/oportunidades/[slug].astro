@@ -7,6 +7,7 @@ import VerificationBadge from '../../components/VerificationBadge.astro';
 import { channels, eligibilityLabels, models, platformTypes } from '../../data/taxonomies';
 import { getPublishedOpportunities, relatedOpportunities, slugOf, toCardData, type OpportunityEntry } from '../../lib/catalog';
 import { breadcrumbJsonLd, webPageJsonLd } from '../../lib/jsonld';
+import { relatedGuideByModel } from '../../lib/seo';
 import { initials, markColor, pendingLabel } from '../../lib/text';
 import { formatDisplayDate, opportunityPath } from '../../lib/urls';
 
@@ -32,6 +33,7 @@ const path = opportunityPath(slug);
 const officialRel = data.affiliateUrl ? 'sponsored noopener noreferrer' : 'noopener noreferrer';
 const officialHref = data.affiliateUrl ?? data.officialUrl;
 const officialLabel = data.affiliateUrl ? 'Ir al enlace de afiliado' : 'Ir al sitio oficial';
+const relatedGuide = relatedGuideByModel[data.models[0]];
 ---
 
 <ArticleLayout
@@ -70,6 +72,10 @@ const officialLabel = data.affiliateUrl ? 'Ir al enlace de afiliado' : 'Ir al si
       <div class="article-body">
         <Content />
       </div>
+      <p>
+        Para comparar esta ficha con otras del mismo modelo, leé <a href={relatedGuide.href}>{relatedGuide.label}</a>
+        {' '}y, si el cobro no está confirmado, <a href="/guias/cobrar-plataformas-internacionales-argentina/">qué verificar para cobrar de plataformas del exterior</a>.
+      </p>
       <section>
         <h2>Preguntas frecuentes</h2>
         {data.faqs.map((faq) => (

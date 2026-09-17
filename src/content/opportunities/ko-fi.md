@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Ko-fi: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Ko-fi, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Ko-fi en Argentina: aportes, membresías y requisitos"
+seoDescription: "Ko-fi combina aportes, membresías y ventas. El cobro depende del proveedor de pago y no está confirmado para Argentina."
 relatedSlugs: ["cafecito", "patreon", "gumroad"]
 featured: false
 featuredRationale: null

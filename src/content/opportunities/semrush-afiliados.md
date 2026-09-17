@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Semrush Affiliate Program: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Semrush Affiliate Program, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Semrush Afiliados: requisitos y funcionamiento"
+seoDescription: "Cómo funciona el programa de afiliados de Semrush. Elegibilidad y cobro desde Argentina no están confirmados."
 relatedSlugs: ["hostinger-afiliados", "adobe-afiliados", "partnerstack"]
 featured: false
 featuredRationale: null

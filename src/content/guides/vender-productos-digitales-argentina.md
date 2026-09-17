@@ -1,8 +1,8 @@
 ---
 title: Cómo vender productos digitales desde Argentina
 summary: Un proceso para validar, publicar y cobrar cursos o archivos comparando Hotmart, Gumroad, Udemy y Ko-fi.
-seoTitle: Vender productos digitales desde Argentina
-seoDescription: Compará Hotmart, Gumroad, Udemy y Ko-fi para vender cursos o archivos desde Argentina, diferenciando checkout y pago al vendedor.
+seoTitle: Cómo vender productos digitales desde Argentina
+seoDescription: Cómo vender ebooks o cursos online desde Argentina. Compará plataformas y separá el pago del comprador del cobro al vendedor.
 publishedAt: 2026-09-17
 contentUpdatedAt: 2026-09-17
 relatedOpportunitySlugs:

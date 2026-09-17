@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "CJ: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona CJ, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "CJ Affiliate: cómo funciona esta red de afiliación"
+seoDescription: "CJ conecta publishers con anunciantes. El alta en la red y el cobro desde Argentina no están confirmados."
 relatedSlugs: ["awin", "impact", "partnerstack"]
 featured: false
 featuredRationale: null

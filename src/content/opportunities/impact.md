@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "impact.com: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona impact.com, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "impact.com: programas de afiliados y requisitos"
+seoDescription: "Cómo funciona impact.com para partners. Operatividad y pagos para socios argentinos no están confirmados."
 relatedSlugs: ["awin", "cj", "partnerstack"]
 featured: false
 featuredRationale: null

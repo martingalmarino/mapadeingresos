@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Adobe Affiliate Program: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Adobe Affiliate Program, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Adobe Afiliados: cómo funciona el programa"
+seoDescription: "Programa de afiliados de Adobe: comisiones por suscripciones o compras. Disponibilidad para Argentina pendiente de verificar."
 relatedSlugs: ["adobe-stock", "semrush-afiliados", "hostinger-afiliados"]
 featured: false
 featuredRationale: null

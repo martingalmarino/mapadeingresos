@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Udemy: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Udemy, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Vender cursos en Udemy: cómo funciona y requisitos"
+seoDescription: "Publicá un curso en Udemy como instructor. El marketplace fija reglas propias; el pago a argentinos no está confirmado."
 relatedSlugs: ["hotmart", "gumroad", "youtube-partners"]
 featured: false
 featuredRationale: null

@@ -42,8 +42,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: 2026-09-17
 reviewStatus: published
-seoTitle: "Cafecito: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Cafecito, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Cafecito: cómo funciona para creadores en Argentina"
+seoDescription: "Recibí aportes con Cafecito, plataforma argentina. Revisá procesadores de pago, mayoría de edad y condiciones vigentes."
 relatedSlugs: ["patreon", "ko-fi", "youtube-partners", "gumroad"]
 featured: true
 featuredRationale: "Plataforma argentina de aportes, relevante para comparar cobros locales sin trasladar condiciones de servicios internacionales."

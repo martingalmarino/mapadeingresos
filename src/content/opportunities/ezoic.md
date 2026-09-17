@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Ezoic: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Ezoic, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Ezoic: cómo funciona y requisitos para sitios web"
+seoDescription: "Optimización publicitaria de Ezoic para blogs y sitios. Requisitos y cobro desde Argentina siguen pendientes."
 relatedSlugs: ["google-adsense", "the-moneytizer", "youtube-partners"]
 featured: false
 featuredRationale: null

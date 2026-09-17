@@ -1,9 +1,9 @@
 ---
-title: Aplicaciones
+title: Cómo monetizar aplicaciones móviles con publicidad
 eyebrow: Perfil por canal
-summary: Opciones para monetizar apps con publicidad, compras o recomendaciones sin sacrificar producto y retención.
-seoTitle: Monetizar aplicaciones desde Argentina
-seoDescription: Evaluá publicidad y otros modelos para apps, con experiencia de usuario, políticas y cobros desde Argentina.
+summary: Publicidad en apps, anuncios en aplicaciones y otros modelos, con requisitos de producto y políticas de tienda.
+seoTitle: Cómo monetizar aplicaciones móviles con publicidad
+seoDescription: AdMob no es publicidad para sitios. Revisá SDK, retención y cobro desde Argentina antes de integrar anuncios.
 selectionTips:
   - Elegí el modelo según frecuencia de uso, costo de soporte y valor para el usuario.
   - Probá anuncios en contextos que no interrumpan tareas críticas.

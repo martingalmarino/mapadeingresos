@@ -50,8 +50,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: 2026-09-17
 reviewStatus: published
-seoTitle: "Programa para Partners de YouTube: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Programa para Partners de YouTube, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Monetizar YouTube en Argentina: requisitos del programa"
+seoDescription: "Requisitos del Programa para Partners de YouTube: umbrales, publicidad del canal y funciones de apoyo de la audiencia."
 relatedSlugs: ["google-adsense", "patreon", "cafecito", "ko-fi"]
 featured: false
 featuredRationale: null

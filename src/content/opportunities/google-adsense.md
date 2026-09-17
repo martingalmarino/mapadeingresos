@@ -46,8 +46,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: 2026-09-17
 reviewStatus: published
-seoTitle: "Google AdSense: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Google AdSense, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Google AdSense en Argentina: requisitos y funcionamiento"
+seoDescription: "Cómo funciona AdSense para sitios, qué requisitos documenta Google y qué implica el alta confirmada desde Argentina."
 relatedSlugs: ["ezoic", "the-moneytizer", "youtube-partners", "google-admob"]
 featured: true
 featuredRationale: "Referencia habitual de publicidad web, con evidencia oficial de disponibilidad para registrarse desde Argentina."

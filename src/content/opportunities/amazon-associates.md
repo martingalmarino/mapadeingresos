@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Amazon Associates: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Amazon Associates, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Amazon Afiliados desde Argentina: qué verificar"
+seoDescription: "No hay Associates en Amazon.com.ar. Evaluá un locale extranjero y por qué el cobro local sigue condicional."
 relatedSlugs: ["mercado-libre-afiliados", "awin", "cj", "travelpayouts"]
 featured: false
 featuredRationale: null

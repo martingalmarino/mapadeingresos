@@ -42,8 +42,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: 2026-09-17
 reviewStatus: published
-seoTitle: "Mercado Libre Afiliados y Creadores: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Mercado Libre Afiliados y Creadores, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Mercado Libre Afiliados Argentina: cómo funciona"
+seoDescription: "Requisitos, comisiones y cobro del programa de afiliados de Mercado Libre. Alta confirmada en Argentina; contrastá las condiciones vigentes."
 relatedSlugs: ["hotmart", "tiendanube-socios", "amazon-associates", "cafecito"]
 featured: true
 featuredRationale: "Programa local de marketplace, útil como primera ficha porque el cobro se discute en el ecosistema argentino."

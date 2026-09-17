@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Gumroad: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Gumroad, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Gumroad en Argentina: qué revisar antes de vender"
+seoDescription: "Cómo funciona Gumroad para vender productos digitales. Que alguien compre desde Argentina no prueba tu retiro como vendedor."
 relatedSlugs: ["hotmart", "ko-fi", "udemy", "cafecito"]
 featured: true
 featuredRationale: "Sirve para analizar venta directa de productos digitales y separar claramente el checkout del comprador del retiro del vendedor."

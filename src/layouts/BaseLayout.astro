@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import ComparisonTray from '../components/ComparisonTray.astro';
 import SEO from '../components/SEO.astro';
 import { site } from '../data/site';
+import { formatPageTitle } from '../lib/seo';
 import { absoluteUrl } from '../lib/urls';
 
 interface Props {
@@ -19,7 +20,7 @@ interface Props {
 
 const { title, description, path, noindex = false, ogType = 'website', jsonLd = [] } = Astro.props;
 const canonical = absoluteUrl(path, site.origin);
-const pageTitle = title.includes(site.name) ? title : `${title} · ${site.name}`;
+const pageTitle = formatPageTitle(title);
 ---
 
 <!doctype html>

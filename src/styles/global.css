@@ -191,8 +191,7 @@ h3 {
   align-items: baseline;
 }
 
-.wordmark-text span,
-.hero-brand span span {
+.wordmark-text span {
   color: var(--primary);
 }
 
@@ -213,6 +212,29 @@ h3 {
 .nav a:hover,
 .nav a[aria-current="page"] {
   color: var(--primary);
+}
+
+.header-cta {
+  min-height: 38px;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+
+.nav a.header-cta {
+  min-height: 38px;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: none;
+  color: var(--white);
+}
+
+.nav a.header-cta:hover,
+.nav a.header-cta[aria-current="page"] {
+  color: var(--white);
+  background: var(--primary-dark);
 }
 
 .button,
@@ -268,25 +290,6 @@ h3 {
 .page-hero {
   padding: 3rem 0 1.6rem;
   text-align: center;
-}
-
-.hero-brand {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7rem;
-  margin: 0 0 0.55rem;
-  font-size: 1.7rem;
-  font-weight: 800;
-  letter-spacing: -0.045em;
-}
-
-.hero-brand-line {
-  width: 76px;
-  height: 3px;
-  margin: 0 auto 1.15rem;
-  border-radius: 99px;
-  background: linear-gradient(90deg, #1769d2, #7dd3fc);
 }
 
 .hero h1,
@@ -1242,8 +1245,10 @@ main {
     display: flex;
   }
 
-  .header-cta {
-    display: none;
+  .nav .header-cta {
+    width: 100%;
+    margin-top: 0.25rem;
+    justify-content: center;
   }
 
   .cards-grid,

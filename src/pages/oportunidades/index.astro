@@ -11,15 +11,15 @@ const cards = opportunities.map(toCardData);
 ---
 
 <BaseLayout
-  title="Directorio de oportunidades"
-  description="Las 25 fichas del directorio, con filtros por modelo, canal, tipo de plataforma y evidencia de alta en Argentina."
+  title="Plataformas para ganar dinero online en Argentina"
+  description="Compará 25 plataformas de monetización: afiliados, publicidad, membresías y ventas. Filtrá por canal, requisitos y alta desde Argentina."
   path="/oportunidades/"
-  jsonLd={[collectionJsonLd('Directorio de oportunidades', `Catálogo completo de ${site.name}.`, '/oportunidades/', cards)]}
+  jsonLd={[collectionJsonLd('Plataformas para ganar dinero online en Argentina', `Catálogo completo de ${site.name}.`, '/oportunidades/', cards)]}
 >
   <section class="page-hero">
     <div class="container">
-      <h1>Oportunidades para explorar</h1>
-      <p class="lede">Las {cards.length} fichas están en esta página. Sin JavaScript seguís viendo el catálogo completo y los enlaces a cada ficha. Los filtros combinan grupos con Y, y opciones dentro de un mismo grupo con O.</p>
+      <h1>Plataformas para ganar dinero online</h1>
+      <p class="lede">Las {cards.length} fichas están en esta página para filtrar y comparar. Sin JavaScript seguís viendo el catálogo completo. Los filtros combinan grupos con Y, y opciones dentro de un mismo grupo con O.</p>
       <DirectoryFilters />
     </div>
   </section>

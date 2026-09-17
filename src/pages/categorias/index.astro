@@ -9,8 +9,8 @@ const categories = await getCollection('categories');
 ---
 
 <ArticleLayout
-  title="Categorías de monetización"
-  description="Cinco modelos de ingreso para comparar: afiliación, publicidad, membresías, productos digitales y licencias de contenido."
+  title="Formas de monetización digital | Mapa de Ingresos"
+  description="Cinco formas de monetización digital: afiliados, publicidad, membresías, productos y licencias. Elegí un modelo y compará fichas."
   path="/categorias/"
   crumbs={[
     { label: 'Inicio', href: '/' },
@@ -18,8 +18,8 @@ const categories = await getCollection('categories');
   ]}
   jsonLd={[breadcrumbJsonLd([{ name: 'Inicio', url: '/' }, { name: 'Categorías', url: '/categorias/' }])]}
 >
-  <h1>Categorías de monetización</h1>
-  <p class="lede">Agrupamos las fichas por la forma de generar ingresos, no por popularidad. Una red de afiliación no es un sexto modelo: es un tipo de plataforma dentro de la afiliación.</p>
+  <h1>Formas de monetización digital</h1>
+  <p class="lede">Agrupamos las fichas por la forma de generar ingresos, no por popularidad. Una red de afiliación no es un sexto modelo: es un tipo de plataforma dentro de los <a href="/categorias/afiliacion/">programas de afiliados en Argentina</a>.</p>
   <div class="category-grid">
     {
       categories.map((entry) => {

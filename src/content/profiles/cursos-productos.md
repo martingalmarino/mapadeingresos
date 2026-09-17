@@ -1,9 +1,9 @@
 ---
-title: Cursos y productos
+title: Herramientas para creadores de cursos y productos
 eyebrow: Perfil por canal
-summary: Caminos para empaquetar conocimiento o recursos propios y distribuirlos con una plataforma adecuada.
-seoTitle: Vender cursos y productos digitales
-seoDescription: Compará plataformas, validación, soporte y cobros para vender cursos y recursos digitales desde Argentina.
+summary: "Flujo de trabajo para monetizar conocimientos: validar, publicar, dar soporte y elegir la herramienta para vender cursos."
+seoTitle: Herramientas para creadores de cursos y productos
+seoDescription: Elegí herramientas para vender cursos según control, descubrimiento y soporte. No es un duplicado de la categoría de productos.
 selectionTips:
   - Validá el problema y la disposición a pagar antes de grabar o diseñar todo.
   - Elegí plataforma según control, descubrimiento, entrega y soporte necesarios.

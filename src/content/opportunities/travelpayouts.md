@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "Travelpayouts: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Travelpayouts, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Travelpayouts: afiliación para contenido de viajes"
+seoDescription: "Cómo funciona Travelpayouts para contenido de turismo. Admisión y pagos para residentes argentinos siguen pendientes."
 relatedSlugs: ["awin", "amazon-associates", "mercado-libre-afiliados"]
 featured: true
 featuredRationale: "Aporta un ejemplo de red vertical: permite evaluar la afiliación especializada en viajes sin extrapolar reglas de programas generalistas."

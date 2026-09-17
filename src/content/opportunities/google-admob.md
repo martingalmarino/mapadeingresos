@@ -46,8 +46,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: 2026-09-17
 reviewStatus: published
-seoTitle: "Google AdMob: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona Google AdMob, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "Google AdMob: cómo monetizar aplicaciones"
+seoDescription: "AdMob sirve anuncios en apps, no en sitios. Argentina figura como país disponible; la admisión se confirma en la cuenta."
 relatedSlugs: ["google-adsense", "ezoic", "youtube-partners"]
 featured: false
 featuredRationale: null

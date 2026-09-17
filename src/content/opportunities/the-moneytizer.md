@@ -40,8 +40,8 @@ sources:
 contentUpdatedAt: 2026-09-17
 eligibilityCheckedAt: null
 reviewStatus: published
-seoTitle: "The Moneytizer: cómo monetizar desde Argentina"
-seoDescription: "Cómo funciona The Moneytizer, qué necesitás y qué falta verificar sobre comisiones, requisitos y cobros desde Argentina."
+seoTitle: "The Moneytizer: monetización web y requisitos"
+seoDescription: "Publicidad para sitios con The Moneytizer. Admisión, requisitos y pago a residentes argentinos no están verificados."
 relatedSlugs: ["google-adsense", "ezoic", "google-admob"]
 featured: false
 featuredRationale: null

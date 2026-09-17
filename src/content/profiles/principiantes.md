@@ -1,9 +1,9 @@
 ---
-title: Principiantes
+title: "Ingresos online para principiantes: cómo empezar"
 eyebrow: Perfil por experiencia
-summary: Un punto de partida para elegir un canal y validar una propuesta antes de sumar plataformas.
-seoTitle: Empezar a monetizar contenido desde Argentina
-seoDescription: Requisitos, decisiones y límites para principiantes que evalúan monetización digital desde Argentina.
+summary: "Monetización para principiantes: canal, habilidades y siguientes pasos, sin recetas de dinero fácil."
+seoTitle: "Ingresos online para principiantes: cómo empezar"
+seoDescription: Cómo empezar a generar ingresos online con un canal sostenible, una sola propuesta y verificación de cobro desde Argentina.
 selectionTips:
   - Elegí un tema, una audiencia y un canal que puedas sostener durante meses.
   - Publicá contenido útil y medí demanda antes de abrir muchas cuentas.
