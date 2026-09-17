@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import InitialsMark from '../../components/InitialsMark.astro';
 import OpportunityCard from '../../components/OpportunityCard.astro';
 import SourceList from '../../components/SourceList.astro';
 import VerificationBadge from '../../components/VerificationBadge.astro';
@@ -8,7 +9,7 @@ import { channels, eligibilityLabels, models, platformTypes } from '../../data/t
 import { getPublishedOpportunities, relatedOpportunities, slugOf, toCardData, type OpportunityEntry } from '../../lib/catalog';
 import { breadcrumbJsonLd, webPageJsonLd } from '../../lib/jsonld';
 import { relatedGuideByModel } from '../../lib/seo';
-import { initials, markColor, pendingLabel } from '../../lib/text';
+import { markColor, pendingLabel } from '../../lib/text';
 import { formatDisplayDate, opportunityPath } from '../../lib/urls';
 
 export async function getStaticPaths() {
@@ -57,7 +58,7 @@ const relatedGuide = relatedGuideByModel[data.models[0]];
   <div class="detail-layout">
     <article>
       <div class="detail-hero">
-        <div class="mark" style={`background:${markColor(slug)}`} aria-hidden="true">{initials(data.name)}</div>
+        <InitialsMark name={data.name} color={markColor(slug)} />
         <div>
           <p class="fact-line">{platformTypes[data.platformType].label} · Actualizado el {formatDisplayDate(data.contentUpdatedAt)}</p>
           <h1>{data.name}</h1>

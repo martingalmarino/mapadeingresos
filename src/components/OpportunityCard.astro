@@ -1,7 +1,8 @@
 ---
 import type { OpportunityCardData } from '../lib/catalog';
-import { initials, markColor } from '../lib/text';
+import { markColor } from '../lib/text';
 import { models } from '../data/taxonomies';
+import InitialsMark from './InitialsMark.astro';
 import VerificationBadge from './VerificationBadge.astro';
 
 interface Props {
@@ -22,6 +23,7 @@ const mark = markColor(item.slug);
   data-models={item.models.join(',')}
   data-channels={item.channels.join(',')}
   data-niches={item.niches.join(',')}
+  data-search={item.searchText}
   data-type={item.platformType}
   data-eligibility={item.argentinaEligibility}
   data-featured={String(item.featured)}
@@ -45,7 +47,7 @@ const mark = markColor(item.slug);
     <VerificationBadge status={item.argentinaEligibility} compact />
   </div>
   <div class="card-identity">
-    <div class="mark" aria-hidden="true">{initials(item.name)}</div>
+    <InitialsMark name={item.name} color={mark} />
     <h3>
       <a href={item.href}>{item.name}</a>
     </h3>

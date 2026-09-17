@@ -1,11 +1,14 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import {
+  channels,
   models,
   platformTypes,
+  type ChannelId,
   type EligibilityId,
   type ModelId,
   type PlatformTypeId,
 } from '../data/taxonomies';
+import { searchAliases } from './search';
 import { opportunityPath } from './urls';
 
 export type OpportunityEntry = CollectionEntry<'opportunities'>;
@@ -19,6 +22,7 @@ export interface OpportunityCardData {
   modelLabels: string[];
   channels: string[];
   niches: string[];
+  searchText: string;
   platformType: PlatformTypeId;
   platformTypeLabel: string;
   isNetwork: boolean;
@@ -31,6 +35,25 @@ export function slugOf(entry: OpportunityEntry | GuideEntry): string {
   return entry.id.replace(/\.md$/, '');
 }
 
+export function buildSearchText(entry: OpportunityEntry): string {
+  const slug = slugOf(entry);
+  const channelLabels = entry.data.channels.map((id) => channels[id as ChannelId]?.label ?? id);
+  return [
+    entry.data.name,
+    entry.data.summary,
+    slug.replace(/-/g, ' '),
+    ...entry.data.models.flatMap((id) => [id.replace(/-/g, ' '), models[id].label, models[id].shortLabel]),
+    ...entry.data.channels.map((id) => id.replace(/-/g, ' ')),
+    ...channelLabels,
+    entry.data.platformType.replace(/-/g, ' '),
+    platformTypes[entry.data.platformType].label,
+    ...entry.data.niches,
+    searchAliases[slug] ?? '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+}
+
 export function toCardData(entry: OpportunityEntry): OpportunityCardData {
   const slug = slugOf(entry);
   return {
@@ -41,6 +64,7 @@ export function toCardData(entry: OpportunityEntry): OpportunityCardData {
     modelLabels: entry.data.models.map((model) => models[model].label),
     channels: entry.data.channels,
     niches: entry.data.niches,
+    searchText: buildSearchText(entry),
     platformType: entry.data.platformType,
     platformTypeLabel: platformTypes[entry.data.platformType].label,
     isNetwork: platformTypes[entry.data.platformType].isNetwork,

@@ -1,0 +1,15 @@
+---
+import { initials } from '../lib/text';
+
+interface Props {
+  name: string;
+  color: string;
+}
+
+const { name, color } = Astro.props;
+const letters = initials(name);
+---
+
+<div class="mark" style={`--mark:${color}`} aria-hidden="true">
+  <span class="mark-letters">{letters}</span>
+</div>
