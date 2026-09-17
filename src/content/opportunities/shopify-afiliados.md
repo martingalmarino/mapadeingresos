@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "redes-sociales"]
 niches: ["Shopify", "programa de afiliados Shopify"]
 officialUrl: "https://www.shopify.com/affiliates"
 affiliateUrl: null
-logo: null
+logo: "/logos/shopify.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

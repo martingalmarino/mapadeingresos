@@ -7,7 +7,7 @@ channels: ["fotografia-diseno"]
 niches: ["Fotografía, ilustración y video"]
 officialUrl: "https://submit.shutterstock.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/shutterstock.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "La elegibilidad de pago para colaboradores argentinos quedó pendiente de verificar."
 argentinaEligibilitySource: null

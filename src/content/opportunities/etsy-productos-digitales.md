@@ -7,7 +7,7 @@ channels: ["fotografia-diseno", "cursos-productos"]
 niches: ["Etsy", "Etsy Argentina Payoneer"]
 officialUrl: "https://www.etsy.com/sell"
 affiliateUrl: null
-logo: null
+logo: "/logos/etsy.svg"
 argentinaEligibility: conditional
 argentinaEligibilityNote: "Etsy incluye Argentina en Etsy Payments mediante Payoneer; la aprobación y el retiro dependen de completar la verificación."
 argentinaEligibilitySource:

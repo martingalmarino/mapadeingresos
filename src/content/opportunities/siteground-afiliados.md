@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube"]
 niches: ["Hosting y WordPress"]
 officialUrl: "https://www.siteground.es/afiliados"
 affiliateUrl: null
-logo: null
+logo: "/logos/siteground.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "La página en español explica el programa, pero el idioma del sitio no acredita admisión ni pagos para Argentina."
 argentinaEligibilitySource: null

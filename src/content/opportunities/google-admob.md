@@ -7,7 +7,7 @@ channels: ["aplicaciones"]
 niches: ["Aplicaciones móviles"]
 officialUrl: "https://admob.google.com/home/"
 affiliateUrl: null
-logo: null
+logo: "/logos/google-admob.svg"
 argentinaEligibility: confirmed
 argentinaEligibilityNote: "Google lista Argentina para AdMob. La disponibilidad nacional no reemplaza la revisión de cuenta, app, tráfico y configuración de pagos."
 argentinaEligibilitySource:

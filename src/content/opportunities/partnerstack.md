@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "newsletter-comunidad"]
 niches: ["Software B2B y SaaS"]
 officialUrl: "https://partnerstack.com/partners-and-publishers"
 affiliateUrl: null
-logo: null
+logo: "/logos/partnerstack.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se verificó la disponibilidad de cobro desde Argentina. Cada programa del marketplace puede sumar requisitos propios."
 argentinaEligibilitySource: null

@@ -7,7 +7,7 @@ channels: ["cursos-productos"]
 niches: ["Amazon", "Amazon KDP Argentina"]
 officialUrl: "https://kdp.amazon.com/en_US/"
 affiliateUrl: null
-logo: null
+logo: "/logos/amazon.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

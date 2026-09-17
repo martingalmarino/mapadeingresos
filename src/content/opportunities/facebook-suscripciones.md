@@ -7,7 +7,7 @@ channels: ["redes-sociales", "newsletter-comunidad"]
 niches: ["Meta", "Facebook Subscriptions Argentina"]
 officialUrl: "https://about.fb.com/news/2023/11/giving-creators-more-ways-to-earn-money-on-facebook-and-instagram/"
 affiliateUrl: null
-logo: null
+logo: "/logos/facebook.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "newsletter-comunidad"]
 niches: ["SEO y marketing"]
 officialUrl: "https://www.semrush.com/lp/affiliate-program/en/"
 affiliateUrl: null
-logo: null
+logo: "/logos/semrush.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se confirmó con una fuente oficial revisada la elegibilidad práctica ni el método de cobro para participantes argentinos."
 argentinaEligibilitySource: null

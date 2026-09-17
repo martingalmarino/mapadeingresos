@@ -7,7 +7,7 @@ channels: ["cursos-productos"]
 niches: ["Cursos online"]
 officialUrl: "https://www.udemy.com/teaching/"
 affiliateUrl: null
-logo: null
+logo: "/logos/udemy.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se confirmaron en fuentes revisadas las condiciones de pago específicas para instructores residentes en Argentina."
 argentinaEligibilitySource: null

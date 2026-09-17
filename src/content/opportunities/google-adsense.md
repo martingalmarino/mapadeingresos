@@ -7,7 +7,7 @@ channels: ["web-blog"]
 niches: ["Contenido web"]
 officialUrl: "https://adsense.google.com/start/"
 affiliateUrl: null
-logo: null
+logo: "/logos/google-adsense.svg"
 argentinaEligibility: confirmed
 argentinaEligibilityNote: "Google incluye Argentina entre los países donde AdSense está disponible. La cuenta, el sitio y la configuración de pagos siguen sujetos a revisión."
 argentinaEligibilitySource:

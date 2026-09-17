@@ -1,4 +1,4 @@
-export const productionOrigin = 'https://mapadeingresos.ar';
+export const productionOrigin = 'https://www.mapadeingresos.ar';
 
 function stripSlash(value: string): string {
   return value.replace(/\/+$/, '');

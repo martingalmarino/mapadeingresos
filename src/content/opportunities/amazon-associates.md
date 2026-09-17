@@ -7,7 +7,7 @@ channels: ["web-blog", "redes-sociales"]
 niches: ["Compras internacionales"]
 officialUrl: "https://affiliate-program.amazon.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/amazon.svg"
 argentinaEligibility: conditional
 argentinaEligibilityNote: "No existe un programa de Associates de Amazon.com.ar. Un residente podría solicitar ingreso en una tienda extranjera, sujeto a sus reglas, revisión y capacidad real de cobro."
 argentinaEligibilitySource: null

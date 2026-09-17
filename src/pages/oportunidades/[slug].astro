@@ -58,7 +58,7 @@ const relatedGuide = relatedGuideByModel[data.models[0]];
   <div class="detail-layout">
     <article>
       <div class="detail-hero">
-        <InitialsMark name={data.name} color={markColor(slug)} />
+        <InitialsMark name={data.name} color={markColor(slug)} logo={data.logo} />
         <div>
           <p class="fact-line">{platformTypes[data.platformType].label} · Actualizado el {formatDisplayDate(data.contentUpdatedAt)}</p>
           <h1>{data.name}</h1>

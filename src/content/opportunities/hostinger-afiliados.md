@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "redes-sociales"]
 niches: ["Hosting y creación web"]
 officialUrl: "https://www.hostinger.com/ar/afiliados"
 affiliateUrl: null
-logo: null
+logo: "/logos/hostinger.svg"
 argentinaEligibility: conditional
 argentinaEligibilityNote: "Existe una landing oficial localizada para Argentina, pero esa localización no prueba por sí sola todas las condiciones de elegibilidad y pago para residentes."
 argentinaEligibilitySource:

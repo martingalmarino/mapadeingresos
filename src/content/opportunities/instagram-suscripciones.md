@@ -7,7 +7,7 @@ channels: ["redes-sociales", "newsletter-comunidad"]
 niches: ["Meta", "Instagram Subscriptions requisitos"]
 officialUrl: "https://www.facebook.com/help/instagram/406451644272016?locale=en_GB"
 affiliateUrl: null
-logo: null
+logo: "/logos/instagram.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

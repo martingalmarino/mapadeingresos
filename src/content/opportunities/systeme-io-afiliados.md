@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "cursos-productos"]
 niches: ["Systeme.io", "Systeme.io Argentina"]
 officialUrl: "https://systeme.io/affiliate-program"
 affiliateUrl: null
-logo: null
+logo: "/logos/systeme-io.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

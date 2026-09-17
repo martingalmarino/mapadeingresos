@@ -7,7 +7,7 @@ channels: ["web-blog"]
 niches: ["Mediavine", "Journey Mediavine Argentina"]
 officialUrl: "https://www.journeymv.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/journey-mediavine.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

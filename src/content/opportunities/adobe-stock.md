@@ -7,7 +7,7 @@ channels: ["fotografia-diseno"]
 niches: ["Fotografía, video y diseño"]
 officialUrl: "https://contributor.stock.adobe.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/adobe.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se verificaron las opciones de cobro disponibles para colaboradores argentinos."
 argentinaEligibilitySource: null

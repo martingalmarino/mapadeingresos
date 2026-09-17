@@ -7,7 +7,7 @@ channels: ["web-blog"]
 niches: ["Medios y contenido web"]
 officialUrl: "https://www.themoneytizer.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/the-moneytizer.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se verificaron en esta revisión la admisión geográfica, los requisitos actuales ni el pago a Argentina."
 argentinaEligibilitySource: null

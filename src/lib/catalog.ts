@@ -29,6 +29,7 @@ export interface OpportunityCardData {
   argentinaEligibility: EligibilityId;
   featured: boolean;
   href: string;
+  logo: string | null;
 }
 
 export function slugOf(entry: OpportunityEntry | GuideEntry): string {
@@ -71,6 +72,7 @@ export function toCardData(entry: OpportunityEntry): OpportunityCardData {
     argentinaEligibility: entry.data.argentinaEligibility,
     featured: entry.data.featured,
     href: opportunityPath(slug),
+    logo: entry.data.logo,
   };
 }
 

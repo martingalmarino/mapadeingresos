@@ -7,7 +7,7 @@ channels: ["web-blog"]
 niches: ["Retail y servicios"]
 officialUrl: "https://www.cj.com/publisher"
 affiliateUrl: null
-logo: null
+logo: "/logos/cj.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "La página para publishers no alcanzó para confirmar condiciones de alta y cobro aplicables a Argentina."
 argentinaEligibilitySource: null

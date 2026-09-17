@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube"]
 niches: ["Elementor", "programa de afiliados Elementor"]
 officialUrl: "https://elementor.com/affiliates/"
 affiliateUrl: null
-logo: null
+logo: "/logos/elementor.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

@@ -4,12 +4,19 @@ import { initials } from '../lib/text';
 interface Props {
   name: string;
   color: string;
+  logo?: string | null;
 }
 
-const { name, color } = Astro.props;
+const { name, color, logo } = Astro.props;
 const letters = initials(name);
 ---
 
-<div class="mark" style={`--mark:${color}`} aria-hidden="true">
-  <span class="mark-letters">{letters}</span>
+<div class:list={['mark', { 'is-logo': Boolean(logo) }]} style={`--mark:${color}`} aria-hidden="true">
+  {
+    logo ? (
+      <img class="mark-logo" src={logo} alt="" width="42" height="42" />
+    ) : (
+      <span class="mark-letters">{letters}</span>
+    )
+  }
 </div>

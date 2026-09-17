@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "redes-sociales"]
 niches: ["NordVPN", "NordVPN Affiliate Program"]
 officialUrl: "https://nordvpn.com/affiliate/"
 affiliateUrl: null
-logo: null
+logo: "/logos/nordvpn.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

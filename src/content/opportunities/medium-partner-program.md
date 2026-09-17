@@ -7,7 +7,7 @@ channels: ["web-blog", "newsletter-comunidad"]
 niches: ["Medium", "Medium Partner Program Argentina"]
 officialUrl: "https://medium.com/partner-program"
 affiliateUrl: null
-logo: null
+logo: "/logos/medium.svg"
 argentinaEligibility: conditional
 argentinaEligibilityNote: "Medium incluye Argentina para cuentas bancarias y residencia fiscal elegibles. El cobro se configura en el flujo del programa."
 argentinaEligibilitySource:

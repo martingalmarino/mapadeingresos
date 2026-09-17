@@ -7,7 +7,7 @@ channels: ["redes-sociales", "web-blog"]
 niches: ["Marketplace y consumo"]
 officialUrl: "https://www.mercadolibre.com.ar/afiliados"
 affiliateUrl: null
-logo: null
+logo: "/logos/mercado-libre.svg"
 argentinaEligibility: confirmed
 argentinaEligibilityNote: "El programa tiene una página oficial argentina. El alta está disponible, pero cobrar exige monotributo y la vía de Creadores requiere aprobación y audiencia mínima."
 argentinaEligibilitySource:

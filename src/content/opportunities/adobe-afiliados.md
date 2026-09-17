@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "redes-sociales"]
 niches: ["Diseño y creatividad"]
 officialUrl: "https://www.adobe.com/affiliates.html"
 affiliateUrl: null
-logo: null
+logo: "/logos/adobe.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "La disponibilidad y el circuito de pagos para Argentina quedaron pendientes de verificar."
 argentinaEligibilitySource: null

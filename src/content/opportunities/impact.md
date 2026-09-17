@@ -7,7 +7,7 @@ channels: ["web-blog", "redes-sociales", "youtube"]
 niches: ["SaaS y marcas digitales"]
 officialUrl: "https://impact.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/impact.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "La operatividad para socios argentinos, incluidos los pagos, no fue confirmada en fuentes oficiales revisadas."
 argentinaEligibilitySource: null

@@ -7,7 +7,7 @@ channels: ["newsletter-comunidad", "youtube", "redes-sociales"]
 niches: ["Comunidades y creación"]
 officialUrl: "https://www.patreon.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/patreon.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se verificaron en esta revisión las opciones de retiro efectivamente disponibles para una cuenta argentina."
 argentinaEligibilitySource: null

@@ -7,7 +7,7 @@ channels: ["web-blog", "redes-sociales"]
 niches: ["Viajes y turismo"]
 officialUrl: "https://www.travelpayouts.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/travelpayouts.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "La admisión y los pagos para residentes argentinos quedaron pendientes de verificación oficial."
 argentinaEligibilitySource: null

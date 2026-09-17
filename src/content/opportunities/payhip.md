@@ -7,7 +7,7 @@ channels: ["cursos-productos", "fotografia-diseno", "newsletter-comunidad"]
 niches: ["Payhip", "vender productos digitales con Payhip"]
 officialUrl: "https://payhip.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/payhip.svg"
 argentinaEligibility: conditional
 argentinaEligibilityNote: "La documentación de Payhip incluye Argentina y ARS para Mercado Pago. La habilitación de cada cuenta sigue sujeta a los requisitos del procesador."
 argentinaEligibilitySource:

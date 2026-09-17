@@ -7,7 +7,7 @@ channels: ["web-blog"]
 niches: ["Publicación web"]
 officialUrl: "https://www.ezoic.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/ezoic.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "Los requisitos actuales y la posibilidad práctica de cobrar desde Argentina no se verificaron oficialmente."
 argentinaEligibilitySource: null

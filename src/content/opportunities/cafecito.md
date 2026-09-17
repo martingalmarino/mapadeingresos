@@ -7,7 +7,7 @@ channels: ["redes-sociales", "newsletter-comunidad"]
 niches: ["Creación independiente"]
 officialUrl: "https://cafecito.app/"
 affiliateUrl: null
-logo: null
+logo: "/logos/cafecito.png"
 argentinaEligibility: confirmed
 argentinaEligibilityNote: "Es una plataforma argentina operada por MicroCoffee S.R.L.; sus términos exigen mayoría de edad y contemplan procesadores locales o disponibles en el servicio."
 argentinaEligibilitySource:

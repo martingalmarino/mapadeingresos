@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "redes-sociales"]
 niches: ["Ecommerce y negocios"]
 officialUrl: "https://www.tiendanube.com/socios"
 affiliateUrl: null
-logo: null
+logo: "/logos/tiendanube.png"
 argentinaEligibility: conditional
 argentinaEligibilityNote: "El hub oficial contempla Argentina y lista la modalidad Afiliados, aunque no se verificaron términos de pago de esa modalidad."
 argentinaEligibilitySource:

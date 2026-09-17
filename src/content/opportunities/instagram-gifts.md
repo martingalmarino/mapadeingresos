@@ -7,7 +7,7 @@ channels: ["redes-sociales"]
 niches: ["Meta", "Instagram Gifts requisitos"]
 officialUrl: "https://www.facebook.com/help/instagram/738469380549477"
 affiliateUrl: null
-logo: null
+logo: "/logos/instagram.svg"
 argentinaEligibility: conditional
 argentinaEligibilityNote: "Argentina figura en un extracto oficial indexado. Deben confirmarse la habilitación de la cuenta y los medios de cobro."
 argentinaEligibilitySource:

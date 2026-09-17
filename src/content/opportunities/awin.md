@@ -7,7 +7,7 @@ channels: ["web-blog", "redes-sociales"]
 niches: ["Comercio y servicios"]
 officialUrl: "https://www.awin.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/awin.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se verificaron admisión y pagos para Argentina. Registrarse en la red tampoco implica ser aceptado por cada anunciante."
 argentinaEligibilitySource: null

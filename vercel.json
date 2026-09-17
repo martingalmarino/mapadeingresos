@@ -1,5 +1,19 @@
 {
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "mapadeingresos.ar" }],
+      "destination": "https://www.mapadeingresos.ar/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "mapadeingresos.ar" }],
+      "destination": "https://www.mapadeingresos.ar/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

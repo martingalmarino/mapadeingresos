@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "newsletter-comunidad"]
 niches: ["Brevo", "programa de afiliados Brevo"]
 officialUrl: "https://www.brevo.com/es/partners/affiliates/"
 affiliateUrl: null
-logo: null
+logo: "/logos/brevo.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

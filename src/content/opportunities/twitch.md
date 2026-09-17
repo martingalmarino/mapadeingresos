@@ -7,7 +7,7 @@ channels: ["redes-sociales", "youtube", "newsletter-comunidad"]
 niches: ["Twitch", "Twitch afiliado requisitos"]
 officialUrl: "https://www.twitch.tv/creatorcamp/en/"
 affiliateUrl: null
-logo: null
+logo: "/logos/twitch.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

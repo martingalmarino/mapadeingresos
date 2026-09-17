@@ -7,7 +7,7 @@ channels: ["web-blog", "youtube", "redes-sociales"]
 niches: ["Fiverr", "Fiverr afiliados Argentina"]
 officialUrl: "https://www.fiverr.com/partnerships/affiliates"
 affiliateUrl: null
-logo: null
+logo: "/logos/fiverr.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

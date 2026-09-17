@@ -7,7 +7,7 @@ channels: ["redes-sociales", "newsletter-comunidad"]
 niches: ["Meta", "Facebook Stars requisitos"]
 officialUrl: "https://creators.facebook.com/tools/stars"
 affiliateUrl: null
-logo: null
+logo: "/logos/facebook.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

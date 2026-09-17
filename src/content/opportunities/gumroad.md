@@ -7,7 +7,7 @@ channels: ["cursos-productos", "web-blog"]
 niches: ["Productos y recursos digitales"]
 officialUrl: "https://gumroad.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/gumroad.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "La compra desde Argentina no demuestra que un vendedor argentino pueda retirar fondos; esa disponibilidad quedó sin verificar."
 argentinaEligibilitySource: null

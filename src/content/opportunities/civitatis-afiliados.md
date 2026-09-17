@@ -7,7 +7,7 @@ channels: ["web-blog", "redes-sociales", "youtube"]
 niches: ["Civitatis", "programa de afiliados Civitatis"]
 officialUrl: "https://www.civitatis.com/es/afiliados/"
 affiliateUrl: null
-logo: null
+logo: "/logos/civitatis.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "No se obtuvo evidencia suficiente para confirmar conjuntamente el alta y el cobro de residentes argentinos. Verificá las condiciones del programa y de tu cuenta."
 argentinaEligibilitySource: null

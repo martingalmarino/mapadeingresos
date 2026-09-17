@@ -7,7 +7,7 @@ channels: ["web-blog", "redes-sociales", "cursos-productos"]
 niches: ["Cursos y educación digital"]
 officialUrl: "https://hotmart.com/la/afiliados"
 affiliateUrl: null
-logo: null
+logo: "/logos/hotmart.png"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "Hotmart presenta opciones para afiliados y productores, pero no se verificaron en esta revisión los retiros disponibles específicamente para residentes argentinos."
 argentinaEligibilitySource: null

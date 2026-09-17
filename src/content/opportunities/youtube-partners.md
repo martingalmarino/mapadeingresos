@@ -7,7 +7,7 @@ channels: ["youtube"]
 niches: ["Video y educación"]
 officialUrl: "https://support.google.com/youtube/answer/7101720?hl=es"
 affiliateUrl: null
-logo: null
+logo: "/logos/youtube.svg"
 argentinaEligibility: confirmed
 argentinaEligibilityNote: "Argentina figura entre los países elegibles para solicitar ingreso. Alcanzar umbrales no garantiza aprobación y cada función puede tener requisitos adicionales."
 argentinaEligibilitySource:

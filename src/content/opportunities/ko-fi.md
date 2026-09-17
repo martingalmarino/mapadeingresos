@@ -7,7 +7,7 @@ channels: ["newsletter-comunidad", "redes-sociales", "cursos-productos"]
 niches: ["Creación y productos"]
 officialUrl: "https://ko-fi.com/"
 affiliateUrl: null
-logo: null
+logo: "/logos/kofi.svg"
 argentinaEligibility: unverified
 argentinaEligibilityNote: "La viabilidad real para Argentina depende de proveedores de pago compatibles; no se confirmó ese circuito en esta revisión."
 argentinaEligibilitySource: null
